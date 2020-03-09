@@ -1,0 +1,151 @@
+.contactForm {
+  position: relative;
+
+  &-Container {
+    width: 100%;
+  }
+  &-Group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-formInput {
+      //border: 1px solid black;
+      background: transparent;
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom: 2px solid $color-black;
+      outline: none;
+      width: 95%;
+      resize: none;
+      @include respond(tab-port) {
+        width: 45%;
+      }
+      height: 5rem;
+      font-size: $fontSize-3;
+      padding-left: 4px ;
+      padding-top: 1rem;
+    }
+    &-formInput:active {
+      caret-color: white;
+    }
+    &-formInput {
+
+    }
+    &-label {
+      font-size: $fontSize-3;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      padding: 2rem;
+    }
+
+  }
+  &-formInput {
+    //border: 1px solid black;
+    background: transparent;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom: 2px solid $color-black;
+    //overflow: none;
+    outline: none;
+    font-family: inherit;
+    //border-radius: $border-radius-small;
+    width: 95%;
+    height: 5rem;
+    max-height: 15rem;
+    font-size: $fontSize-3;
+    padding-left: 4px;
+    padding-bottom: 2px;
+    resize: none;
+
+  }
+  &-label {
+    font-size: $fontSize-3;
+  }
+  &-submit {
+    padding-bottom: 2rem;
+  }
+}
+.content-item {
+  width: 100%;
+  height: 20rem;
+  display: inline-block;
+}
+
+.ContactPage {
+  width: 100%;
+  //height: 180%;
+  //@include respond(phone) {
+  //  height: 100%;
+  //}
+  position: absolute;
+  background-image: linear-gradient(to bottom right, $color-primary,$color-secondary);
+
+  &__contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    //@include respond(phone) {
+    //  font-size: 10rem;
+    //}
+    //padding-bottom: 10rem;
+    //margin-top: em;
+    padding: 0 0 5rem 0;
+    flex-direction: column;
+  }
+
+  &-header {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    font-size: 3rem;
+    position: relative;
+    padding: 20rem 2rem 2rem 2rem;
+    @include respond(nav) {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    margin-top: 20rem;
+
+    z-index: 999;
+    color: white;
+  }
+
+  &-headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-container {
+    margin-top: 10rem;
+    width: 100%;
+    @include respond(phone) {
+      margin-top: 25rem;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    //height: 100%;
+    @include respond(tab-port) {
+      padding: 20rem 0;
+      //height: 100%;
+    }
+    background-image: linear-gradient(to bottom right, $color-primary,$color-secondary);
+  }
+}

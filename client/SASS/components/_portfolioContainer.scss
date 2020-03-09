@@ -1,0 +1,92 @@
+.PortContainer {
+  width: 100%;
+  background-image: linear-gradient(to top left, $color-primary,$color-secondary);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__cardContainer {
+    margin-top: 9rem;
+    @include respond(phone) {
+      margin-top: 10rem;
+    }
+    @include respond(tab-land) {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+.PortCardContainer {
+  font-size: 2.5rem;
+  @include respond(tab-port) {
+    font-size: $fontSize-3;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-btn {
+    @include respond(tab-port) {
+      //transform: translateX(2rem);
+    }
+  }
+
+
+
+  &__cardText {
+
+    @include respond(tab-port) {
+      transform: skew(-8deg);
+      padding: 2rem;
+    }
+    &-shape {
+      display: inline-block;
+      width: 15rem;
+      margin: 2rem;
+      height: 15rem;
+      border-radius: 50%;
+      @include respond(tab-port){
+        transform: translateX(-2rem);
+        height: 20rem;
+        width: 20rem;
+      }
+      background-color: $color-secondary;
+    }
+    &-header {
+      @include respond(tab-port) {
+        margin-right: 2rem;
+        transform: translateX(-2rem);
+      }
+    }
+  }
+  &__card {
+    border: 4px solid $color-white;
+    color: $color-secondary;
+    @include respond(tab-port) {
+      transform: skew(8deg);
+    }
+    background-color: $color-grey-light-1;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    margin: 4rem 4rem 4rem 4rem;
+    align-self: baseline;
+    padding: 1rem;
+    max-width: 40rem;
+  }
+  &__cardContainer {
+    width: 100%;
+    &-left {
+      @include respond(tab-land) {
+        flex: 0 0 50%;
+        margin-right: 4rem;
+      }
+    }
+
+    &-right {
+      @include respond(tab-land) {
+        flex: 1;
+      }
+    }
+  }
+}
