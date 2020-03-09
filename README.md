@@ -1,4 +1,4 @@
-# CompanyWebsite
+# Personal Website
 This will be our company website to showcase to customers
 
 # Getting started
