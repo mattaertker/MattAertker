@@ -1,16 +1,11 @@
 import React, {Component} from "react";
 import {Container} from 'reactstrap';
-import Button from "reactstrap/es/Button";
-import ReCAPTCHA from "react-google-recaptcha";
-import axios from 'axios';
-
 
 export default class ContactForm extends Component {
     constructor(props) {
         super(props);
 
         this.verifyCallback = this.verifyCallback.bind(this);
-        // this.handleButtonSubmit = this.handleButtonSubmit.bind(this);
         this.nameChange = this.nameChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
         this.emailChange = this.emailChange.bind(this);
@@ -33,24 +28,23 @@ export default class ContactForm extends Component {
     }
 
 
-    render() { //TODO: Break this up into smaller components
+    render() {
         return (
             <form className="contactForm" onSubmit={this.submitForm} style={{marginBottom: this.props.marBot}}>
                 <Container className="contactForm-Group-item">
                     <label className="contactForm-Group-label" style={{color: this.props.textColor}} htmlFor="contact-name"></label>
                     <input id="contact-name"
-                              name="name"
-                              type="text"
-                              spellCheck="false"
-                              placeholder="Your name"
-                              className={this.state.classname ? this.state.classname : "contactForm-Group-formInput"}
-                              onChange={this.nameChange}
-                              style={{
-                                  borderBottom: "1px solid " +this.props.textColor,
-                                  caretColor: this.props.textColor,
-                                  color: this.props.textColor
-                              }}/>
-                    {this.state.userName ? this.state.userName.length === 0 && <p style={{fontSize: "2rem", color: "red"}}>Please fill out your name.</p> : null}
+                           name="name"
+                           type="text"
+                           spellCheck="false"
+                           placeholder="Your name"
+                           className={this.state.classname ? this.state.classname : "contactForm-Group-formInput"}
+                           onChange={this.nameChange}
+                           style={{
+                               borderBottom: "1px solid " +this.props.textColor,
+                               caretColor: this.props.textColor,
+                               color: this.props.textColor
+                           }}/>
                 </Container>
                 <Container className="contactForm-Group-item">
                     <label className="contactForm-Group-label" style={{color: this.props.textColor}}></label>
@@ -65,7 +59,6 @@ export default class ContactForm extends Component {
                                   caretColor: this.props.textColor,
                                   color: this.props.textColor
                               }}/>
-                    {this.state.emailName ?this.state.emailName.length === 0 && <p style={{fontSize: "2rem", color: "red"}}>Please fill out your email.</p> : null}
                 </Container>
                 <Container className="contactForm-Group-item content-item">
                     <label className="contactForm-label" style={{color: this.props.textColor}}>
@@ -80,22 +73,14 @@ export default class ContactForm extends Component {
                                       caretColor: this.props.textColor,
                                       color: this.props.textColor
                                   }}/>
-                        {this.state.contentName ? this.state.contentName.length === 0 && <p style={{fontSize: "2rem", color: "red"}}>Please fill out the message box.</p> : null}
                     </label>
-                    {/*<div style={{display: "flex", alignItems: "center", justifyContent: "center", marginTop: "2rem"}}>*/}
-                    {/*    <ReCAPTCHA sitekey="6LdW6NEUAAAAAPp3asVXpShRmMTWTctcXnkW7TM1" onChange={this.verifyCallback}/>*/}
-                    {/*</div>*/}
                     {this.state.status === "ERROR" && <p style={{fontSize: "2rem", color: "red"}}>{this.state.errorMesssage}</p>}
-                        <button className="button button--animated button--white contactForm-submit"
-                                type="submit" >Submit</button>
+                    <button className="button button--animated button--white contactForm-submit"
+                            type="submit" >Submit</button>
                     {this.state.status === "SUCCESS" && <p id="my-form-status" style={{fontSize: "2rem", paddingTop: "3rem"}}>Thank you! I will get back with you as soon as possible</p>}
                 </Container>
             </form>
         );
-    }
-
-    lengthError() {
-
     }
 
     submitForm(ev) {
@@ -125,7 +110,7 @@ export default class ContactForm extends Component {
             this.setState({status: "ERROR", validEmail: null, validName: null, validContent: null});
             if (this.state.userName === null
                 || this.state.userName.length === 0 ) {
-                    errorMesssage += " your name";
+                errorMesssage += " your name";
             }
             else if (this.state.emailName === null
                 || this.state.emailName.length === 0) {
@@ -144,7 +129,7 @@ export default class ContactForm extends Component {
         }
     }
 
-    nameChange(event) { // event.target.value to get the value
+    nameChange(event) {
         let letters = /^[A-Za-z\s]+$/;
         let className = "contactForm-Group-formInput";
         if (event.target.value.match(letters)) {
@@ -201,7 +186,7 @@ export default class ContactForm extends Component {
             });
 
         }
-        else { // if value isn't just letters
+        else {
             let errorClass = className + " formError__name";
             this.setState({
                 contentName: null,
@@ -209,48 +194,6 @@ export default class ContactForm extends Component {
                 validContent: false
             });
         }
-    }
-
-    // async handleButtonSubmit(e) {
-    //     e.preventDefault();
-    //     //TODO: re-enable the uncommented section below and other parts in this method
-    //     // if (this.state.recaptchaVerified
-    //     //     && this.state.validEmail
-    //     //     && this.state.validName
-    //     //     && this.state.validContent) {
-    //             // alert("Success");
-    //             const name = this.state.userName;
-    //             const email = this.state.emailName;
-    //             const content = this.state.contentName;
-    //
-    //             // axios.defaults.
-    //             axios.defaults.proxy = true;
-    //             await axios({
-    //                 method: "POST",
-    //                 url: "http://localhost:3001/api/form",
-    //                 data: {
-    //                     name,
-    //                     email,
-    //                     content
-    //                 }
-    //             }).then((response)=>{
-    //                 console.log("got here");
-    //                 if (response.data.msg === 'success'){
-    //                     alert("Email sent, awesome!");
-    //                     // this.resetForm()
-    //                 }else if(response.data.msg === 'fail'){
-    //                     alert("Oops, something went wrong. Try again")
-    //                 }
-    //             });
-    //     // }
-    //     // else {
-    //     //     alert("Please correct or fill out all the fields");
-    //     // }
-    // }
-
-    handleSubmit(event) {
-        event.preventDefault();
-
     }
 
     verifyCallback(response) {

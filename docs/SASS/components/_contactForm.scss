@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     &-formInput {
-      //border: 1px solid black;
       background: transparent;
       border-top-style: hidden;
       border-right-style: hidden;
@@ -47,16 +46,13 @@
 
   }
   &-formInput {
-    //border: 1px solid black;
     background: transparent;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom: 2px solid $color-black;
-    //overflow: none;
     outline: none;
     font-family: inherit;
-    //border-radius: $border-radius-small;
     width: 95%;
     height: 5rem;
     max-height: 15rem;
@@ -81,10 +77,6 @@
 
 .ContactPage {
   width: 100%;
-  //height: 180%;
-  //@include respond(phone) {
-  //  height: 100%;
-  //}
   position: absolute;
   background-image: linear-gradient(to bottom right, $color-primary,$color-secondary);
 
@@ -93,28 +85,18 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    //@include respond(phone) {
-    //  font-size: 10rem;
-    //}
-    //padding-bottom: 10rem;
-    //margin-top: em;
     padding: 0 0 5rem 0;
     flex-direction: column;
   }
 
   &-header {
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
     font-size: 3rem;
     position: relative;
-    padding: 20rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 2rem 2rem;
     @include respond(nav) {
       margin-top: 0;
       padding-top: 0;
     }
-    margin-top: 20rem;
-
     z-index: 999;
     color: white;
   }
@@ -137,15 +119,25 @@
     @include respond(phone) {
       margin-top: 25rem;
     }
+    @include respond(microLuma) {
+      margin-top: 5rem;
+    }
+    @include respond(microLuma2) {
+      margin-top: 25rem;
+    }
+    @include respond(ipadPro) {
+      margin-top: 32rem;
+    }
+    @include respond(ipadPro2) {
+      margin-top: 25rem;
+    }
+    @include respond(nav) {
+      padding-bottom: 25rem;
+    }
   }
 
   &__container {
     width: 100%;
-    //height: 100%;
-    @include respond(tab-port) {
-      padding: 20rem 0;
-      //height: 100%;
-    }
     background-image: linear-gradient(to bottom right, $color-primary,$color-secondary);
   }
 }

@@ -52,15 +52,6 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-180rem);
-  }
-}
-
-@keyframes animate2 {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-250rem);
+    transform: translateY(-200vh);
   }
 }

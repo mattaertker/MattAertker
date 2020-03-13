@@ -9,27 +9,22 @@ export default class Contact extends Component {
     }
 
     render() {
-        return ( // if windowSize is >
-            <div style={{width: 100 +"%", height: 100 +"%" }} className="ContactPage-center">
-                <Container id="Contact" className="ContactPage"/>
+        return (
+            <div style={{width: 100 +"%"}} className="ContactPage-center" id="Contact">
+                <Container className="ContactPage"/>
                 <div className="ContactPage__container">
                     <div className="ContactPage-container">
-                        {/*{this.getPersonalPhoto()}*/}
                         <div className="ContactPage-headerContainer">
                             <div className="ContactPage-header">I look forward to meeting you!</div>
                         </div>
                         <div className="ContactPage__contactForm">
-                            <img src={user1} style={{height: "20rem", width: "20rem", borderRadius: "5px"}}/>
+                            <img src={user1} style={{height: "20rem", width: "20rem", borderRadius: "5px"}} alt="user pic"/>
                         </div>
-                            <ContactForm textColor="white" marBot="10rem"/>
+                        <ContactForm textColor="white" marBot="10rem"/>
                     </div>
 
                 </div>
             </div>
         );
-    }
-
-    getPersonalPhoto() {
-        // TODO: implement if screewidth > tabport then show my image above the contact Page
     }
 }
