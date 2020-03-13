@@ -1,6 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   mode: 'production',

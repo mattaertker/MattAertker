@@ -23,15 +23,6 @@ export default class Footer extends Component {
                             </div>
                         </div>
                         <div className="footer__home-iconsContainer-icon">
-                            {/*<div className="icon-container">*/}
-                            {/*    <i className="fa fa-envelope"/>*/}
-                            {/*    <div className="text__small icon-container-text">*/}
-                            {/*        digitalwebflex*/}
-                            {/*        <div className="icon-container-text-email icon-container-text">*/}
-                            {/*            @gmail.com*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                             <div className="iconAndTextContainer">
                                 <div className="iconContainer">
                                     <i className="fa fa-envelope"/>

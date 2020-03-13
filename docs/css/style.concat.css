@@ -36,13 +36,7 @@
   0% {
     transform: translateY(0); }
   100% {
-    transform: translateY(-180rem); } }
-
-@keyframes animate2 {
-  0% {
-    transform: translateY(0); }
-  100% {
-    transform: translateY(-250rem); } }
+    transform: translateY(-200vh); } }
 
 *,
 *::after,
@@ -326,10 +320,7 @@ a.intro-Contact-link {
 .PortContainer {
   width: 100%;
   background-image: linear-gradient(to top left, #1D1160, #00788C);
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  position: absolute; }
   .PortContainer__cardContainer {
     margin-top: 9rem; }
     @media only screen and (min-width: 37.5em) {
@@ -464,8 +455,7 @@ a.intro-Contact-link {
   .ContactPage-header {
     font-size: 3rem;
     position: relative;
-    padding: 20rem 2rem 2rem 2rem;
-    margin-top: 20rem;
+    padding: 5rem 2rem 2rem 2rem;
     z-index: 999;
     color: white; }
     @media only screen and (min-width: 48em) {
@@ -486,12 +476,24 @@ a.intro-Contact-link {
     @media only screen and (min-width: 37.5em) {
       .ContactPage-container {
         margin-top: 25rem; } }
+    @media only screen and (min-width: 39.9em) {
+      .ContactPage-container {
+        margin-top: 5rem; } }
+    @media only screen and (min-width: 40.1em) {
+      .ContactPage-container {
+        margin-top: 25rem; } }
+    @media only screen and (min-width: 63.9em) {
+      .ContactPage-container {
+        margin-top: 32rem; } }
+    @media only screen and (min-width: 64.1em) {
+      .ContactPage-container {
+        margin-top: 25rem; } }
+    @media only screen and (min-width: 48em) {
+      .ContactPage-container {
+        padding-bottom: 25rem; } }
   .ContactPage__container {
     width: 100%;
     background-image: linear-gradient(to bottom right, #1D1160, #00788C); }
-    @media only screen and (min-width: 56.25em) {
-      .ContactPage__container {
-        padding: 20rem 0; } }
 
 .footer__home {
   width: 100%;

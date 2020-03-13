@@ -2,9 +2,6 @@
   width: 100%;
   background-image: linear-gradient(to top left, $color-primary,$color-secondary);
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   &__cardContainer {
     margin-top: 9rem;
     @include respond(phone) {
@@ -25,14 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &-btn {
-    @include respond(tab-port) {
-      //transform: translateX(2rem);
-    }
-  }
-
-
 
   &__cardText {
 

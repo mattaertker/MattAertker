@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Container} from 'reactstrap';
 import PortfolioCard from "./PortfolioCard";
-import ThreeDCube from "../Components/3dcube/threeDCube";
 
 export default class Portfolio extends Component {
     constructor(props) {
@@ -51,13 +50,6 @@ export default class Portfolio extends Component {
                                                 website to demonstrate a website for photographers."/>
                     </Container>
                 </Container>
-                {/*<div className="animation-area">*/}
-                {/*    <ul className="box-area">*/}
-                {/*        <li className="box-area-1"><ThreeDCube/></li>*/}
-                {/*        <li className="box-area-2"><ThreeDCube/></li>*/}
-                {/*        <li className="box-area-3"><ThreeDCube/></li>*/}
-                {/*    </ul>*/}
-                {/*</div>*/}
             </Container>
         );
     }
