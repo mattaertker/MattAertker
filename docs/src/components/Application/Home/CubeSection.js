@@ -8,7 +8,8 @@ export default class CubeSection extends Component {
         return (
             <Container id="Home" className="Home-container">
                 <Container className="Home">
-                    <h2 className="Home__header"><div className="Home__header-text">DigitalWebFlex</div></h2>
+                    <h2 className="Home__header"><div className="Home__header-text">Matt Aertker</div></h2>
+                    <h3 className="Home__header"><div className="Home__header-text Home__header-text-2">Im a developer</div></h3>
                 </Container>
                 <div className="animation-area">
                     <ul className="box-area">

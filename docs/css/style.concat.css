@@ -66,6 +66,10 @@ body {
   height: 5rem;
   width: 5rem; }
 
+.moveInBottom {
+  animation: moveInBottom 1s ease-in;
+  animation-fill-mode: backwards; }
+
 .appComp {
   text-align: center;
   font-size: 5.5rem; }
@@ -704,18 +708,16 @@ a.intro-Contact-link {
   background-image: linear-gradient(to top, #1D1160, #00788C);
   width: 100%;
   height: 100%;
-  position: absolute; }
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
   .Home__header {
-    color: #fff;
-    animation: moveInBottom 1s ease-out;
-    animation-fill-mode: backwards;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh; }
+    color: #fff; }
     .Home__header-text {
-      transition: all .2s;
-      position: relative;
+      animation: moveInBottom 1s ease-in;
+      animation-fill-mode: backwards;
       z-index: 999;
       font-size: 48%; }
       @media only screen and (min-width: 37.5em) {
@@ -724,6 +726,13 @@ a.intro-Contact-link {
       @media only screen and (min-width: 56.25em) {
         .Home__header-text {
           font-size: 100%; } }
+      .Home__header-text-2 {
+        animation: moveInBottom 1s ease-in;
+        animation-fill-mode: backwards;
+        animation-delay: .7s; }
+        @media only screen and (min-width: 56.25em) {
+          .Home__header-text-2 {
+            padding-bottom: 10rem; } }
     .Home__header-text:hover {
       transform: translateY(-3px);
       text-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);

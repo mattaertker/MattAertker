@@ -36,7 +36,7 @@ export default class Footer extends Component {
                         {this.getContactUsIcon()}
                     </Container>
                     <Container className="footer__home-copyright">
-                        This website was built and designed by DigitalWebFlex &copy; DigitalWebFlex 2019.
+                        This website was built and designed by Matt Aertker &copy; Matt Aertker 2019.
                     </Container>
                 </Container>
             );
