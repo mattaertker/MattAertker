@@ -11,3 +11,8 @@
   height: 5rem;
   width: 5rem;
 }
+
+.moveInBottom {
+  animation: moveInBottom 1s ease-in;
+  animation-fill-mode: backwards;
+}

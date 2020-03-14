@@ -7,10 +7,11 @@ export default class IntroSection extends Component {
         this.setPageAbout = this.setPageAbout.bind(this);
     }
 
+
     render() {
         return (
             <Container className="intro">
-                <Container className="intro-text">
+                <Container className="intro-text moveInBottom fadeInUp">
                     Hello, are you in need of a passionate, hard-working developer? Search no more,
                     because I am ready for the job! With almost 4 years of experience through classes
                     with Colorado State University, personal projects, and multiple online courses, I
