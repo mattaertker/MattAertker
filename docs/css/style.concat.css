@@ -323,68 +323,59 @@ a.intro-Contact-link {
 
 .PortContainer {
   width: 100%;
+  height: 100vh;
   background-image: linear-gradient(to top left, #1D1160, #00788C);
   position: absolute; }
-  .PortContainer__cardContainer {
-    margin-top: 9rem; }
-    @media only screen and (min-width: 37.5em) {
-      .PortContainer__cardContainer {
-        margin-top: 10rem; } }
-    @media only screen and (min-width: 75em) {
-      .PortContainer__cardContainer {
-        display: flex;
-        width: 100%; } }
 
-.PortCardContainer {
-  font-size: 2.5rem;
+.Tabs {
+  height: 100%;
+  flex-direction: column;
   display: flex;
-  align-items: center;
-  justify-content: center; }
-  @media only screen and (min-width: 56.25em) {
-    .PortCardContainer {
-      font-size: 3rem; } }
-  @media only screen and (min-width: 56.25em) {
-    .PortCardContainer__cardText {
-      transform: skew(-8deg);
-      padding: 2rem; } }
-  .PortCardContainer__cardText-shape {
-    display: inline-block;
-    width: 15rem;
-    margin: 2rem;
-    height: 15rem;
-    border-radius: 50%;
-    background-color: #00788C; }
-    @media only screen and (min-width: 56.25em) {
-      .PortCardContainer__cardText-shape {
-        transform: translateX(-2rem);
-        height: 20rem;
-        width: 20rem; } }
-  @media only screen and (min-width: 56.25em) {
-    .PortCardContainer__cardText-header {
-      margin-right: 2rem;
-      transform: translateX(-2rem); } }
-  .PortCardContainer__card {
-    border: 4px solid #fff;
-    color: #00788C;
-    background-color: #f7f7f7;
-    border-radius: 2rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    margin: 4rem 4rem 4rem 4rem;
-    align-self: baseline;
-    padding: 1rem;
-    max-width: 40rem; }
-    @media only screen and (min-width: 56.25em) {
-      .PortCardContainer__card {
-        transform: skew(8deg); } }
-  .PortCardContainer__cardContainer {
-    width: 100%; }
-    @media only screen and (min-width: 75em) {
-      .PortCardContainer__cardContainer-left {
-        flex: 0 0 50%;
-        margin-right: 4rem; } }
-    @media only screen and (min-width: 75em) {
-      .PortCardContainer__cardContainer-right {
-        flex: 1; } }
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.6rem; }
+  .Tabs__option {
+    float: left;
+    padding: 3rem 0 2rem 2rem;
+    display: flex; }
+    .Tabs__option-text {
+      display: none;
+      color: white;
+      font: 1.6rem;
+      padding-left: 2rem; }
+      @media only screen and (min-width: 56.25em) {
+        .Tabs__option-text {
+          display: inline-block; } }
+    .Tabs__option-input {
+      display: none; }
+    .Tabs__option-button {
+      height: 3rem;
+      width: 3rem;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      left: 1.1rem; }
+      .Tabs__option-button::after {
+        content: "";
+        display: block;
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        opacity: 0;
+        transition: opacity .2s; }
+    .Tabs__option-label {
+      font-size: 1.6rem;
+      cursor: pointer;
+      position: relative;
+      padding-left: 3.5rem; }
+  .Tabs__option-input:checked ~ .Tabs__option-label .Tabs__option-button::after {
+    opacity: 1; }
 
 .contactForm {
   position: relative; }
