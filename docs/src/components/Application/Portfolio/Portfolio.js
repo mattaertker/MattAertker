@@ -11,7 +11,45 @@ export default class Portfolio extends Component {
         return (
             <Container id="Portfolio" className="PortContainer">
                 <Container className="PortContainer__cardContainer">
-                    <Container className="PortCardContainer__cardContainer-left">
+                    <form className="Tabs">
+                        <Container className="Tabs__option">
+                            <input type="radio" className="Tabs__option-input" id="Natours" name="project"/>
+                            <label for="Natours" className="Tabs__option-label">
+                                <span className="Tabs__option-button"></span>
+                                <span className="Tabs__option-text">Natours</span>
+                            </label>
+                        </Container>
+                        <Container className="Tabs__option">
+                            <input type="radio" className="Tabs__option-input" id="MedicareReimbursements" name="project"/>
+                            <label for="MedicareReimbursements" className="Tabs__option-label">
+                                <span className="Tabs__option-button"></span>
+                                <span className="Tabs__option-text">Medicare Reimbursements</span>
+                            </label>
+                        </Container>
+                        <Container className="Tabs__option">
+                            <input type="radio" className="Tabs__option-input" id="Hotel" name="project"/>
+                            <label for="Hotel" className="Tabs__option-label">
+                                <span className="Tabs__option-button"></span>
+                                <span className="Tabs__option-text">Hotel</span>
+                            </label>
+                        </Container>
+                        <Container className="Tabs__option">
+                            <input type="radio" className="Tabs__option-input" id="CsuBugZoo" name="project"/>
+                            <label for="CsuBugZoo" className="Tabs__option-label">
+                                <span className="Tabs__option-button"></span>
+                                <span className="Tabs__option-text">CSU bug zoo volunteers</span>
+                            </label>
+                        </Container>
+                        <Container className="Tabs__option">
+                            <input type="radio" className="Tabs__option-input" id="CsuFlightTrip" name="project"/>
+                            <label for="CsuFlightTrip" className="Tabs__option-label">
+                                <span className="Tabs__option-button"></span>
+                                <span className="Tabs__option-text">CSU Flight Trip Itinerary</span>
+                            </label>
+                        </Container>
+                    </form>
+
+                    {/* <Container className="PortCardContainer__cardContainer-left">
                         <PortfolioCard cardHeader="Natours"
                                        source="Natours"
                                        PortKey="Natours"
@@ -48,7 +86,7 @@ export default class Portfolio extends Component {
                                        PortHref="#Video"
                                        description="This is a website that is undergoing, and will be used as a display
                                                 website to demonstrate a website for photographers."/>
-                    </Container>
+                    </Container> */}
                 </Container>
             </Container>
         );
