@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Container} from 'reactstrap';
+import TabContent from './TabContent';
 
 //TODO: take the multiple toggle functions and make them just accept a variable then have a switch statement and toggle accordingly
 
@@ -23,8 +24,9 @@ export default class Tabs extends Component {
 
     render() {
         return (
-            <div>
-                <form className="Tabs">
+            <div style={{overflowY: "scroll"}}>
+                {this.renderTabs()}
+                <Container className="Tabs">
                             <Container className="Tabs__option">
                                 <input type="radio" className="Tabs__option-input" id="Natours" name="project" onChange={this.toggleNatours}/>
                                 <label htmlFor="Natours" className="Tabs__option-label">
@@ -60,16 +62,40 @@ export default class Tabs extends Component {
                                     <span className="Tabs__option-text">CSU Flight Trip Itinerary</span>
                                 </label>
                             </Container>
-                        </form>
-                        {this.renderNatours()}
-                        {this.renderHotel()}
-                        {this.renderMedicare()}
-                        {this.renderBugZoo()}
-                        {this.renderFlightTrip()}
+                        </Container>
                     </div>
 
 
         )
+    }
+
+    renderTabs() {
+        if (this.state.isNatours) {
+            return(
+                <TabContent header="Natours tab"/>
+            )
+        }
+        if (this.state.isHotel) {
+            return(
+                <TabContent header="Hotel tab"/>
+            )
+        }
+        if (this.state.isMedicare) {
+            return(
+                <TabContent header="Medicare tab"/>
+            )
+        }
+        if (this.state.isBugZoo) {
+            return(
+                <TabContent header="Bug Zoo tab"/>
+            )
+        }
+        if (this.state.isFlightTrip) {
+            return(
+                <TabContent header="FlightTrip tab"/>
+            )
+        }
+        return null;
     }
 
     toggleNatours() {
@@ -82,15 +108,6 @@ export default class Tabs extends Component {
         });
     }
 
-    renderNatours() {
-        if (this.state.isNatours) {
-            return(
-                <h1>Natours Tab</h1>
-            )
-        }
-        return null;
-    }
-
     toggleHotel() {
         this.setState({
             isNatours: false,
@@ -99,15 +116,6 @@ export default class Tabs extends Component {
             isBugZoo: false,
             isFlightTrip: false
         });
-    }
-
-    renderHotel() {
-        if (this.state.isHotel) {
-            return(
-                <h1>Hotel Tab</h1>
-            )
-        }
-        return null;
     }
 
     toggleMedicare() {
@@ -119,15 +127,6 @@ export default class Tabs extends Component {
             isFlightTrip: false
         });
     }
-
-    renderMedicare() {
-        if (this.state.isMedicare) {
-            return(
-                <h1>Medicare Tab</h1>
-            )
-        }
-        return null;
-    }
     toggleBugZoo() {
         this.setState({
             isNatours: false,
@@ -137,16 +136,6 @@ export default class Tabs extends Component {
             isFlightTrip: false
         });
     }
-
-    renderBugZoo() {
-        if (this.state.isBugZoo) {
-            return(
-                <h1>Bug Zoo Tab</h1>
-            )
-        }
-        return null;
-    }
-
     toggleFlightTrip() {
         this.setState({
             isNatours: false,
@@ -155,14 +144,5 @@ export default class Tabs extends Component {
             isBugZoo: false,
             isFlightTrip: true
         });
-    }
-
-    renderFlightTrip() {
-        if (this.state.isFlightTrip) {
-            return(
-                <h1>FlightTrip Tab</h1>
-            )
-        }
-        return null;
     }
 }
