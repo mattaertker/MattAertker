@@ -383,12 +383,25 @@ a.intro-Contact-link {
   position: absolute;
   height: 140rem;
   width: 100%;
-  margin-top: 20%;
-  background-color: red; }
+  margin-top: 20%; }
   @media only screen and (min-width: 48em) {
     .TabContent {
       width: 80%;
       margin: 10% 10%; } }
+  .TabContent__header {
+    margin: 3rem 0 2rem 0; }
+  .TabContent__images-left {
+    display: none; }
+    @media only screen and (min-width: 48em) {
+      .TabContent__images-left {
+        display: block; } }
+  .TabContent__images-mid {
+    width: 95%; }
+  .TabContent__images-right {
+    display: none; }
+    @media only screen and (min-width: 48em) {
+      .TabContent__images-right {
+        display: block; } }
 
 .contactForm {
   position: relative; }
@@ -722,6 +735,7 @@ a.intro-Contact-link {
     .Home__header-text {
       animation: moveInBottom 1s ease-in;
       animation-fill-mode: backwards;
+      position: relative;
       z-index: 999;
       font-size: 48%; }
       @media only screen and (min-width: 37.5em) {

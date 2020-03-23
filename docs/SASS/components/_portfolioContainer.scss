@@ -91,9 +91,79 @@
   height: 140rem; 
   width: 100%;
   margin-top: 20%;
-  background-color: red;
+  // background-color: orangered;
   @include respond(nav) {
     width: 80%;
     margin: 10% 10%;
   }
+
+  &__header {
+    margin: 3rem 0 2rem 0;
+
+  }
+
+  &__images {
+
+    &-left{
+      display: none;
+      @include respond(nav) {
+        display: block;
+      }
+
+    }
+
+    &-mid {
+      width: 95%;
+
+    }
+
+    &-right {
+      display: none;
+      @include respond(nav) {
+        display: block;
+      }
+    }
+  }
+
+
+  &__description {
+
+    &-tech {
+
+      &-left {
+
+      }
+
+      &-right {
+
+      }
+    }
+
+
+    &-intro {
+
+      &-left {
+
+      }
+
+      &-right {
+
+      }
+    }
+
+    
+    &-goal {
+
+      &-left {
+
+      }
+
+      &-right {
+
+      }
+    }
+
+  }
+
+
 }

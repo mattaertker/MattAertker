@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Container} from 'reactstrap';
 import TabContent from './TabContent';
+import Natours from './Natours.jpg';
 
 //TODO: take the multiple toggle functions and make them just accept a variable then have a switch statement and toggle accordingly
 
@@ -13,7 +14,7 @@ export default class Tabs extends Component {
         this.toggleBugZoo = this.toggleBugZoo.bind(this);
         this.toggleFlightTrip = this.toggleFlightTrip.bind(this);
         this.state = {
-            isNatours: false, 
+            isNatours: true, 
             isMedicare: false,
             isHotel: false,
             isBugZoo: false,
@@ -26,9 +27,11 @@ export default class Tabs extends Component {
         return (
             <div style={{overflowY: "scroll"}}>
                 {this.renderTabs()}
+                {/* {this.renderMyPortfolio()} */}
                 <Container className="Tabs">
                             <Container className="Tabs__option">
-                                <input type="radio" className="Tabs__option-input" id="Natours" name="project" onChange={this.toggleNatours}/>
+                                <input type="radio" className="Tabs__option-input" 
+                                id="Natours" name="project" onChange={this.toggleNatours} checked={this.state.isNatours ? this.state.isNatours : null}/>
                                 <label htmlFor="Natours" className="Tabs__option-label">
                                     <span className="Tabs__option-button"></span>
                                     <span className="Tabs__option-text">Natours</span>
@@ -72,7 +75,7 @@ export default class Tabs extends Component {
     renderTabs() {
         if (this.state.isNatours) {
             return(
-                <TabContent header="Natours tab"/>
+                <TabContent header="Natours tab" macImage={Natours}/>
             )
         }
         if (this.state.isHotel) {
