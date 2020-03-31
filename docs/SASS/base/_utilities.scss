@@ -1,8 +1,8 @@
 .text__small {
-  font-size: 1.5rem;
+  font-size: $default-font-size;
 }
 .text--extraSmall {
-  font-size: 1rem;
+  font-size: $fontSize-small;
 }
 .text-center {
   display: flex;

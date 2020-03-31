@@ -16,6 +16,10 @@ export default class Tabs extends Component {
                     <img src={this.props.macImage} className="TabContent__images-mid"/>    
                     <Container className="TabContent__images-right">{this.props.ipadImage}</Container>    
                 </Container>
+                <Container className="TabContent__link">
+                    <a className="TabContent__link-left" href={this.props.github} target="_blank">Github</a>
+                    <a className="TabContent__link-right" href={this.props.visit} target="_blank">Visit</a>
+                </Container>
                 <Container className="TabContent__description">
                     <Container className="TabContent__description-tech">
                         <Container className="TabContent__description-tech-Left"></Container>    
