@@ -90,6 +90,9 @@ export default class Tabs extends Component {
             return(
                 <TabContent header="Personal Portfolio" 
                             macImage={MattA} 
+                            techUsed={"The technologies I used for this project are React, and SCSS."}
+                            introText={"I began this project back January at the end of my winter break in order to get better at react and designing my own website!"}
+                            goal={"The goal of this project was to display all of my personal projects I have accomplished through my degree at CSU and personal experience!"}
                             visit={"https://mattaertker.github.io/MattAertker/"}
                             github={"https://github.com/mattaertker/MattAertker"}/>
             )
@@ -98,6 +101,9 @@ export default class Tabs extends Component {
             return(
                 <TabContent header="Natours" 
                             macImage={Natours} 
+                            goal={"The goal of this project was to first get a decent baseground knowledge of advanced CSS before I moved into some more complex things!"}
+                            introText={"I began this project last summer in order to learn how to develope my own website and advanced CSS! "}
+                            techUsed={"The technologies I used for this project are HTML 5, and CSS."}
                             visit={"https://mattaertker.github.io/Natours/"} 
                             github={"https://github.com/mattaertker/Natours"}/>
             )
@@ -106,6 +112,9 @@ export default class Tabs extends Component {
             return(
                 <TabContent header="Hotel" 
                             macImage={Hotel} 
+                            goal={"The goal of this project was to practice a second form of advanced SCSS with flexbox!"}
+                            techUsed={"The technologies I used for this project are HTML 5, and SCSS."}
+                            introText={"I began this project last summer in order to get better with SCSS, SVG's, and animations!"}
                             visit={"https://mattaertker.github.io/HotelSite/"} 
                             github={"https://github.com/mattaertker/HotelSite"}/>
             )
@@ -113,13 +122,20 @@ export default class Tabs extends Component {
         if (this.state.isMedicare) {
             return(
                 <TabContent header="Medicare Reimbursements"   
-                            macImage={Medicare}/>
+                            macImage={Medicare}
+                            goal={"The goal of this website was to perform calculations for 5000 different hospital's medicare reimbursements!"}
+                            introText={"I did this project with 3 other group members, and it was one of my first big websites I developed for my web development class!"}
+                            techUsed={"The technologies I used for this project are HTML 5, Fuel MVC, javascript, and CSS."}
+                            visit={"https://www.cs.colostate.edu/~maertker/ct310/m4/index/project"}/>
             )
         }
         if (this.state.isBugZoo) {
             return(
                 <TabContent header="CSU Bug Zoo"  
                             macImage={BugZoo}
+                            goal={"The goal of this website is to provide information to the Bug zoo volunteer's at CSU about all the different species in the Zoo!"}
+                            introText={"This website is in progress, and is hopefully to be used by the CSU bug zoo volunteers as a guide for taking care of the bugs!"}
+                            techUsed={"The technologies I am using for this project are HTML 5, and SCSS."}
                             visit={"https://mattaertker.github.io/BugZooVolunteers/"} 
                             github={"https://github.com/mattaertker/BugZooVolunteers"}/>
             )

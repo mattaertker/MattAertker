@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Container} from 'reactstrap';
+import Challenge from './challenge.jpg';
+import Goal from './goal.jpg';
 import Natours from './Natours.jpg';
 
 export default class Tabs extends Component {
@@ -22,15 +24,24 @@ export default class Tabs extends Component {
                 </Container>
                 <Container className="TabContent__description">
                     <Container className="TabContent__description-tech">
-                        <Container className="TabContent__description-tech-Left"></Container>    
+                    {/* <span className="TabContent__description-intro-challenge"> */}
+                        <Container className="TabContent__description-tech-Left">{"</> "}</Container>
+                        <span className="TabContent__description-tech-Left-tech">Technology</span>
+                    {/* </span>      */}
                         <Container className="TabContent__description-tech-right">{this.props.techUsed}</Container>    
                     </Container>
                     <Container className="TabContent__description-intro">
-                        <Container className="TabContent__description-intro-Left"></Container>    
+                        <span className="TabContent__description-intro-challenge">
+                            <img className="TabContent__description-intro-Left" src={Challenge} alt="challenge"/>
+                            <span className="TabContent__description-tech-Left-tech">Challenges</span>
+                        </span>    
                         <Container className="TabContent__description-intro-right">{this.props.introText}</Container>
                     </Container>
                     <Container className="TabContent__description-goal">
-                        <Container className="TabContent__description-goal-Left"></Container>    
+                        <Container className="TabContent__description-goal-Left">
+                            <img className="TabContent__description-goal-Left-1" src={Goal} alt="challenge"/>
+                            <span className="TabContent__description-goal-Left-2">Goal</span>    
+                        </Container>    
                         <Container className="TabContent__description-goal-right">{this.props.goal}</Container>
                     </Container>
                 </Container>    
