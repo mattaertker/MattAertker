@@ -39,7 +39,7 @@ export default class Tabs extends Component {
                                 id="Personal" name="project" onChange={this.togglePersonal} checked={this.state.isPersonal ? this.state.isPersonal : null}/>
                                 <label htmlFor="Personal" className="Tabs__option-label">
                                     <span className="Tabs__option-button"></span>
-                                    <span className="Tabs__option-text">Personal Site</span>
+                                    <span className="Tabs__option-text" id="Tabs__option-text">Personal Site</span>
                                 </label>
                             </Container>
                             <Container className="Tabs__option">
@@ -47,28 +47,28 @@ export default class Tabs extends Component {
                                 id="Natours" name="project" onChange={this.toggleNatours} />
                                 <label htmlFor="Natours" className="Tabs__option-label">
                                     <span className="Tabs__option-button"></span>
-                                    <span className="Tabs__option-text">Natours</span>
+                                    <span className="Tabs__option-text" id="Tabs__option-text">Natours</span>
                                 </label>
                             </Container>
                             <Container className="Tabs__option">
                                 <input type="radio" className="Tabs__option-input" id="MedicareReimbursements" name="project" onChange={this.toggleMedicare}/>
                                 <label htmlFor="MedicareReimbursements" className="Tabs__option-label">
                                     <span className="Tabs__option-button"></span>
-                                    <span className="Tabs__option-text">Medicare Reimbursements</span>
+                                    <span className="Tabs__option-text" id="Tabs__option-text">Medicare Reimbursements</span>
                                 </label>
                             </Container>
                             <Container className="Tabs__option">
                                 <input type="radio" className="Tabs__option-input" id="Hotel" name="project" onChange={this.toggleHotel}/>
                                 <label htmlFor="Hotel" className="Tabs__option-label">
                                     <span className="Tabs__option-button"></span>
-                                    <span className="Tabs__option-text">Hotel</span>
+                                    <span className="Tabs__option-text" id="Tabs__option-text">Hotel</span>
                                 </label>
                             </Container>
                             <Container className="Tabs__option">
                                 <input type="radio" className="Tabs__option-input" id="CsuBugZoo" name="project" onChange={this.toggleBugZoo}/>
                                 <label htmlFor="CsuBugZoo" className="Tabs__option-label">
                                     <span className="Tabs__option-button"></span>
-                                    <span className="Tabs__option-text">CSU bug zoo volunteers</span>
+                                    <span className="Tabs__option-text" id="Tabs__option-text">CSU bug zoo volunteers</span>
                                 </label>
                             </Container>
                             {/* <Container className="Tabs__option">

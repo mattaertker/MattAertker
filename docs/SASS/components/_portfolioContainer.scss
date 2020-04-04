@@ -37,13 +37,23 @@
     &-text {
       display: none;
       // padding: 0 0 0 2rem;
+      // height: 5rem;
       color: white;
       font-size: $default-font-size;
       padding-left: 2rem;
-      @include respond(tab-port) {
+      @include respond(tab-land) {
         display: inline-block;
+        transform: translateY(0);
       }
+
+      transform: translateY(1rem);
+      
+      
     }
+
+    
+
+    
 
     &-input {
       display: none;
@@ -79,6 +89,10 @@
         cursor: pointer;
         position: relative;
         padding-left: 3.5rem;
+        line-height: 5px;
+        @include respond(tab-land) {
+          line-height: normal;
+        }
 
     }
   }
@@ -86,6 +100,8 @@
     opacity: 1;
   }
 }
+
+
 .TabContent {
   position: absolute;
   display: flex;
@@ -140,18 +156,18 @@
     margin-top: 3rem;
 
     &-left {
-      text-decoration: none;
+      // text-decoration: none;
       color: $color-white;
       text-shadow: 2px 2px $color-black;
-      margin-right: 1rem;
+      margin-right: 3rem;
 
     }
 
     &-right{
-      text-decoration: none;
+      // text-decoration: none;
       color: $color-white;
       text-shadow: 2px 2px $color-black;
-      margin-left: 1rem;
+      margin-left: 3rem;
     }
 
     &::before,
@@ -165,20 +181,11 @@
   &__description {
     color: $color-white;
     font-size: $fontSize-2;
-    // @include respond(tab-port) {
       max-width: 50rem;
 
       @include respond(tab-port) {
         max-width: 70rem;
       }
-    // }
-
-    // @include respond(nav) {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-direction: column;
-    // }
     
 
     &-tech {
@@ -198,15 +205,8 @@
       
 
       &-left {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // transform: translateY(-.5rem);
-        // font-size: 80%;
 
         &-tech {
-          // transform: translateY(.5rem);
-
           margin-left: 1rem;
         }
 
@@ -239,10 +239,21 @@
       &-challenge {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-.5rem);
+        @include respond(nav) {
+          transform: translateX(0);
+          align-items: flex-start;
+          flex-direction: row;
+        }
       }
 
       &-left {
+        transform: translateX(.5rem);
+        @include respond(nav) {
+          transform: translateX(0);
+        }
         max-height: 3rem;
         max-width: 3rem;
 
@@ -275,7 +286,12 @@
 
       &-left {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-1rem);
         @include respond(nav) {
+          transform: translateX(0);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -284,7 +300,11 @@
 
         &-1 {
           max-height: 3.5rem;
-           max-width: 3.5rem;
+          max-width: 3.5rem;
+          transform: translateX(1rem);
+          @include respond(nav) {
+            transform: translateX(0);
+          }
 
         }
         &-2 {
@@ -307,3 +327,8 @@
 
 
 }
+
+.Tabs__option-button:hover ~.Tabs__option-text {
+  display: inline-block;
+}
+

@@ -20,7 +20,7 @@ export default class Tabs extends Component {
                 </Container>
                 <Container className="TabContent__link">
                     <a className="TabContent__link-left" href={this.props.github} target="_blank">Github</a>
-                    <a className="TabContent__link-right" href={this.props.visit} target="_blank">Visit</a>
+                    <a className="TabContent__link-right" href={this.props.visit} target="_blank">Live Link</a>
                 </Container>
                 <Container className="TabContent__description">
                     <Container className="TabContent__description-tech">
