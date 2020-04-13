@@ -53,35 +53,31 @@ export default class Tabs extends Component {
     }
 
     animatePage() {
-        if (document.getElementById('TabContent__Personal'))
+        if (document.getElementById('TabContent__Personal') && this.props.pers)
+        {
             document.getElementById('TabContent__Personal').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);
-        if (document.getElementById('TabContent__Natours'))
+            ], 2000);}
+        if (document.getElementById('TabContent__Natours') && this.props.nat) {
             document.getElementById('TabContent__Natours').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);
-        if (document.getElementById('TabContent__Medicare'))
+            ], 2000);}
+        if (document.getElementById('TabContent__Medicare') && this.props.med){
             document.getElementById('TabContent__Medicare').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);
-        if (document.getElementById('TabContent__Hotel'))
+            ], 2000);}
+        if (document.getElementById('TabContent__Hotel') && this.props.hot){
             document.getElementById('TabContent__Hotel').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);
-        if (document.getElementById('TabContent__BugZoo'))
+            ], 2000);}
+        if (document.getElementById('TabContent__BugZoo') && this.props.bug){
             document.getElementById('TabContent__BugZoo').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);
-        // if (this.props.natours)
-        //     document.getElementById('TabContent__Personal').animate([
-        //         {opacity: 0,transform: 'translateY(5rem)'},
-        //         {opacity: 1,transform: 'translateY(0)'}
-        //     ], 2000);
+            ], 2000);}
     }
 }

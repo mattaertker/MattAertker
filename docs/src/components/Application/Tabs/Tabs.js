@@ -100,6 +100,7 @@ export default class Tabs extends Component {
                     iphoneImage={MattAIphone}
                     id="TabContent__Personal"
                     ipadImage={MattAIpad}
+                    pers={true}
                     techUsed={"The technologies I used for this project are React, and SCSS."}
                     introText={"I began this project back January at the end of my winter break in order to get better at react and designing my own website!"}
                     goal={"The goal of this project was to display all of my personal projects I have accomplished through my degree at CSU and personal experience!"}
@@ -113,6 +114,7 @@ export default class Tabs extends Component {
                     macImage={Natours}
                     iphoneImage={NatIphone}
                     ipadImage={NatIpad}
+                    nat={true}
                     id="TabContent__Natours"
                     goal={"The goal of this project was to first get a decent baseground knowledge of advanced CSS before I moved into some more complex things!"}
                     introText={"I began this project last summer in order to learn how to develope my own website and advanced CSS! "}
@@ -128,6 +130,7 @@ export default class Tabs extends Component {
                     macImage={Hotel}
                     iphoneImage={HotelIphone}
                     ipadImage={HotelIpad}
+                    hot={true}
                     id="TabContent__Hotel"
                     goal={"The goal of this project was to practice a second form of advanced SCSS with flexbox!"}
                     techUsed={"The technologies I used for this project are HTML 5, and SCSS."}
@@ -142,6 +145,7 @@ export default class Tabs extends Component {
                     macImage={Medicare}
                     iphoneImage={MedicareIphone}
                     ipadImage={G5Ipad}
+                    med={true}
                     id="TabContent__Medicare"
                     goal={"The goal of this website was to perform calculations for 5000 different hospital's medicare reimbursements!"}
                     introText={"I did this project with 3 other group members, and it was one of my first big websites I developed for my web development class!"}
@@ -155,6 +159,7 @@ export default class Tabs extends Component {
                     macImage={BugZoo}
                     iphoneImage={bugZooIphone}
                     ipadImage={bugZooIpad}
+                    bug={true}
                     id="TabContent__BugZoo"
                     goal={"The goal of this website is to provide information to the Bug zoo volunteer's at CSU about all the different species in the Zoo!"}
                     introText={"This website is in progress, and is hopefully to be used by the CSU bug zoo volunteers as a guide for taking care of the bugs!"}
