@@ -33,10 +33,10 @@ export default class Tabs extends Component {
         this.toggleBugZoo = this.toggleBugZoo.bind(this);
         this.displayDiv = this.displayDiv.bind(this);
         // this.toggleFlightTrip = this.toggleFlightTrip.bind(this);
-        this.rotateToMedicare = this.rotateToMedicare.bind(this);
-        this.rotateToHotel = this.rotateToHotel.bind(this);
-        this.rotateToPersonal = this.rotateToPersonal.bind(this);
-        this.rotateToBugZoo = this.rotateToBugZoo.bind(this);
+        // this.rotateToMedicare = this.rotateToMedicare.bind(this);
+        // this.rotateToHotel = this.rotateToHotel.bind(this);
+        // this.rotateToPersonal = this.rotateToPersonal.bind(this);
+        // this.rotateToBugZoo = this.rotateToBugZoo.bind(this);
         this.togglePersonal = this.togglePersonal.bind(this);
         this.state = {
             isPersonal: true,
