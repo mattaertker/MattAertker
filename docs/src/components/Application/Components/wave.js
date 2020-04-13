@@ -11,7 +11,7 @@ class Waves extends Component {
     componentDidMount() {
         this.vantaEffect = WAVES({
             el: this.vantaRef.current,
-            color: 0x34149d,
+            color: 0x30197d,
             mouseControls: false,
             touchControls: false,
             THREE: THREE

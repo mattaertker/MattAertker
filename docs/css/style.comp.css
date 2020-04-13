@@ -26,6 +26,14 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveInBottom2 {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 @keyframes loop {
   from {
     transform: rotateX(0deg) rotateY(0deg); }
@@ -49,6 +57,9 @@ html {
   font-size: 62.5%;
   font-family: 'Titillium Web', sans-serif;
   scroll-behavior: smooth; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 body {
   box-sizing: border-box; }
@@ -345,15 +356,22 @@ a.intro-Contact-link {
   .Tabs__option {
     float: left;
     padding: 3rem 0 2rem 2rem;
+    width: 5rem;
     display: flex; }
+    @media only screen and (min-width: 56.25em) {
+      .Tabs__option {
+        padding: 4rem 0 4rem 2rem; } }
+    .Tabs__option-btnContainer {
+      height: 4px;
+      display: block;
+      width: 15rem; }
     .Tabs__option-text {
-      display: none;
+      visibility: hidden;
+      transition: all .4s;
+      opacity: 0;
       color: white;
       font-size: 1.6rem;
-      padding-left: 2rem; }
-      @media only screen and (min-width: 56.25em) {
-        .Tabs__option-text {
-          display: inline-block; } }
+      transform: translateY(2rem); }
     .Tabs__option-input {
       display: none; }
     .Tabs__option-button {
@@ -363,7 +381,10 @@ a.intro-Contact-link {
       border-radius: 50%;
       display: inline-block;
       position: absolute;
-      left: 1.1rem; }
+      left: 0; }
+      @media only screen and (min-width: 37.5em) {
+        .Tabs__option-button {
+          left: 2rem; } }
       .Tabs__option-button::after {
         content: "";
         display: block;
@@ -381,7 +402,11 @@ a.intro-Contact-link {
       font-size: 1.6rem;
       cursor: pointer;
       position: relative;
-      padding-left: 3.5rem; }
+      padding-left: 3.5rem;
+      line-height: 5px; }
+      @media only screen and (min-width: 75em) {
+        .Tabs__option-label {
+          line-height: normal; } }
   .Tabs__option-input:checked ~ .Tabs__option-label .Tabs__option-button::after {
     opacity: 1; }
 
@@ -391,7 +416,9 @@ a.intro-Contact-link {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all 2s;
   width: 100%;
+  animation: moveInBottom2 2s ease-out;
   margin-top: 25%; }
   @media only screen and (min-width: 48em) {
     .TabContent {
@@ -404,30 +431,51 @@ a.intro-Contact-link {
     padding: 0 1.5rem; }
   .TabContent__images-left {
     display: none; }
-    @media only screen and (min-width: 48em) {
+    @media only screen and (min-width: 75em) {
       .TabContent__images-left {
-        display: block; } }
+        display: block;
+        position: absolute;
+        width: 12vw;
+        transform: translate(0, 10rem); } }
   .TabContent__images-mid {
-    width: 75%;
-    max-height: 70%; }
+    width: 50vw; }
   .TabContent__images-right {
     display: none; }
-    @media only screen and (min-width: 48em) {
+    @media only screen and (min-width: 75em) {
       .TabContent__images-right {
-        display: block; } }
+        display: block;
+        width: 30vw;
+        transform: translate(55rem, -20rem);
+        float: right;
+        position: absolute; } }
+    @media only screen and (min-width: 87.5em) {
+      .TabContent__images-right {
+        transform: translate(60rem, -20rem); } }
+    @media only screen and (min-width: 100em) {
+      .TabContent__images-right {
+        transform: translate(65rem, -25rem); } }
   .TabContent__link {
     font-size: 60%;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (min-width: 37.5em) {
+      .TabContent__link {
+        flex-direction: row; } }
     .TabContent__link-left {
-      text-decoration: none;
       color: #fff;
-      text-shadow: 2px 2px #000;
-      margin-right: 1rem; }
+      text-shadow: 2px 2px #000; }
+      @media only screen and (min-width: 37.5em) {
+        .TabContent__link-left {
+          margin-right: 3rem; } }
     .TabContent__link-right {
-      text-decoration: none;
       color: #fff;
-      text-shadow: 2px 2px #000;
-      margin-left: 1rem; }
+      text-shadow: 2px 2px #000; }
+      @media only screen and (min-width: 37.5em) {
+        .TabContent__link-right {
+          margin-left: 3rem; } }
     .TabContent__link::before, .TabContent__link::after {
       content: "";
       border: 0 solid #e2e8f0; }
@@ -469,10 +517,21 @@ a.intro-Contact-link {
       .TabContent__description-intro-challenge {
         display: flex;
         justify-content: center;
-        align-items: flex-start; }
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-0.5rem); }
+        @media only screen and (min-width: 48em) {
+          .TabContent__description-intro-challenge {
+            transform: translateX(0);
+            align-items: flex-start;
+            flex-direction: row; } }
       .TabContent__description-intro-left {
+        transform: translateX(0.5rem);
         max-height: 3rem;
         max-width: 3rem; }
+        @media only screen and (min-width: 48em) {
+          .TabContent__description-intro-left {
+            transform: translateX(0); } }
       .TabContent__description-intro-right {
         font-size: 2rem;
         margin-top: 2rem; }
@@ -491,16 +550,25 @@ a.intro-Contact-link {
         .TabContent__description-goal {
           flex-direction: row; } }
       .TabContent__description-goal-left {
-        display: flex; }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(-1rem); }
         @media only screen and (min-width: 48em) {
           .TabContent__description-goal-left {
+            transform: translateX(0);
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: row; } }
         .TabContent__description-goal-left-1 {
           max-height: 3.5rem;
-          max-width: 3.5rem; }
+          max-width: 3.5rem;
+          transform: translateX(1rem); }
+          @media only screen and (min-width: 48em) {
+            .TabContent__description-goal-left-1 {
+              transform: translateX(0); } }
         .TabContent__description-goal-left-2 {
           margin-left: 1rem; }
       .TabContent__description-goal-right {
@@ -509,6 +577,12 @@ a.intro-Contact-link {
           .TabContent__description-goal-right {
             margin-left: 10rem;
             text-align: start; } }
+
+.Tabs__option-btnContainer:hover ~ .Tabs__option-text {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); }
 
 .contactForm {
   position: relative; }

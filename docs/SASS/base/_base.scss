@@ -12,6 +12,7 @@ html {
 	font-family: 'Titillium Web', sans-serif;
 	scroll-behavior: smooth;
 
+
 	// @include respond(phone) {
 	// 	font-size: 67%;
 	// }
@@ -20,9 +21,9 @@ html {
 	// 	font-size: 70%;
 	// }
 
-	// @include respond(tab-land) {
-	// 	font-size: 80%;
-	// }
+	@include respond(big-desktop) {
+		font-size: 80%;
+	}
 
 	
 }

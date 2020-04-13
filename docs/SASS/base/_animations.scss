@@ -42,6 +42,18 @@
   }
 }
 
+@keyframes moveInBottom2 {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 @keyframes loop {
   from {transform: rotateX(0deg) rotateY(0deg)}
   to {transform: rotateX(360deg) rotateY(360deg)}
