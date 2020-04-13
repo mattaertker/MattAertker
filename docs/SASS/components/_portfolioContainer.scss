@@ -45,7 +45,10 @@
 
     &-text {
       
-      // display: none;
+      display: none;
+      @include respond(phone) {
+        display: block;
+      }
       visibility: hidden;
       // padding: 0 0 0 2rem;
       // height: 5rem;
