@@ -31,7 +31,7 @@ export default class Tabs extends Component {
         this.toggleMedicare = this.toggleMedicare.bind(this);
         this.toggleHotel = this.toggleHotel.bind(this);
         this.toggleBugZoo = this.toggleBugZoo.bind(this);
-        this.displayDiv = this.displayDiv.bind(this);
+        // this.displayDiv = this.displayDiv.bind(this);
         // this.toggleFlightTrip = this.toggleFlightTrip.bind(this);
         // this.rotateToMedicare = this.rotateToMedicare.bind(this);
         // this.rotateToHotel = this.rotateToHotel.bind(this);
@@ -92,6 +92,7 @@ export default class Tabs extends Component {
     renderTabs() {
         // if (!this.state.userClick)
         //     this.displayDiv();
+
         if (this.state.isPersonal) {
             return (
                 <TabContent header="Personal Portfolio"
@@ -339,4 +340,5 @@ export default class Tabs extends Component {
     //         }, 5000);
     //     }
     // }
+
 }
