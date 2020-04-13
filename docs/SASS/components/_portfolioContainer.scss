@@ -103,9 +103,9 @@
         position: relative;
         padding-left: 3.5rem;
         line-height: 5px;
-        @include respond(tab-land) {
-          line-height: normal;
-        }
+        // @include respond(tab-land) {
+        //   line-height: normal;
+        // }
 
     }
   }

@@ -55,6 +55,7 @@ export default class Tabs extends Component {
         return (
             <div style={{ overflowY: "scroll" }}>
                 {this.renderTabs()}
+                {this.displayDiv()}
                 <Container className="Tabs">
                     <Container className="Tabs__option">
                         <input type="radio" className="Tabs__option-input"
@@ -89,8 +90,8 @@ export default class Tabs extends Component {
     }
 
     renderTabs() {
-        if (!this.state.userClick)
-            this.displayDiv();
+        // if (!this.state.userClick)
+        //     this.displayDiv();
         if (this.state.isPersonal) {
             return (
                 <TabContent header="Personal Portfolio"
@@ -224,7 +225,7 @@ export default class Tabs extends Component {
         });
     }
     displayDiv() { 
-        if (this.state.isPersonal) {
+        if (this.state.isPersonal && !this.state.userClick) {
             setTimeout(() => {
                 if (!this.state.userClick) {
                     this.setState({
@@ -234,6 +235,7 @@ export default class Tabs extends Component {
                         isMedicare: false,
                         isBugZoo: false,
                     });
+                    if (this.state.isPersonal)
                     document.getElementById("Personal").checked = false;
                     document.getElementById("Natours").checked = true;
                     document.getElementById('TabContent__Natours').animate([

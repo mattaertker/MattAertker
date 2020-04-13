@@ -404,9 +404,6 @@ a.intro-Contact-link {
       position: relative;
       padding-left: 3.5rem;
       line-height: 5px; }
-      @media only screen and (min-width: 75em) {
-        .Tabs__option-label {
-          line-height: normal; } }
   .Tabs__option-input:checked ~ .Tabs__option-label .Tabs__option-button::after {
     opacity: 1; }
 
