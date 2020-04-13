@@ -47,37 +47,39 @@ export default class Tabs extends Component {
                         </Container>
                     </Container>    
                 </div>
-                {this.animatePage()}
+                {this.animatePage(this.props.id)}
             </div>
         )
     }
 
-    animatePage() {
-        if (document.getElementById('TabContent__Personal') && this.props.pers)
+    animatePage(id) {
+        if (id){
+        if (document.getElementById('TabContent__Personal'))
         {
             document.getElementById('TabContent__Personal').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
             ], 2000);}
-        if (document.getElementById('TabContent__Natours') && this.props.nat) {
+        if (document.getElementById('TabContent__Natours')) {
             document.getElementById('TabContent__Natours').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
             ], 2000);}
-        if (document.getElementById('TabContent__Medicare') && this.props.med){
+        if (document.getElementById('TabContent__Medicare')){
             document.getElementById('TabContent__Medicare').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
             ], 2000);}
-        if (document.getElementById('TabContent__Hotel') && this.props.hot){
+        if (document.getElementById('TabContent__Hotel')){
             document.getElementById('TabContent__Hotel').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
             ], 2000);}
-        if (document.getElementById('TabContent__BugZoo') && this.props.bug){
+        if (document.getElementById('TabContent__BugZoo')){
             document.getElementById('TabContent__BugZoo').animate([
                 {opacity: 0,transform: 'translateY(5rem)'},
                 {opacity: 1,transform: 'translateY(0)'}
             ], 2000);}
+        }
     }
 }
