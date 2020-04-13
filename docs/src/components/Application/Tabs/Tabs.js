@@ -55,7 +55,7 @@ export default class Tabs extends Component {
         return (
             <div style={{ overflowY: "scroll" }}>
                 {this.renderTabs()}
-                {this.displayDiv()}
+                {/* {this.displayDiv()} */}
                 <Container className="Tabs">
                     <Container className="Tabs__option">
                         <input type="radio" className="Tabs__option-input"
