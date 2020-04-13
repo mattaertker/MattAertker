@@ -90,7 +90,7 @@
   }
 
   &-header {
-    font-size: 3rem;
+    font-size: $fontSize-3;
     position: relative;
     padding: 5rem 2rem 2rem 2rem;
     @include respond(nav) {
@@ -138,6 +138,7 @@
 
   &__container {
     width: 100%;
-    background-image: linear-gradient(to bottom right, $color-primary,$color-secondary);
+    // background-image: url('../user1.jpg');
+    background-image:  linear-gradient(to bottom right, $color-primary,$color-secondary);
   }
 }
