@@ -231,7 +231,7 @@ export default class Tabs extends Component {
         });
     }
     displayDiv() { 
-        if (this.state.isPersonal && !this.state.userClick) {
+        if (this.state.isPersonal) {
             setTimeout(() => {
                 if (!this.state.userClick) {
                     this.setState({
@@ -241,7 +241,6 @@ export default class Tabs extends Component {
                         isMedicare: false,
                         isBugZoo: false,
                     });
-                    if (this.state.isPersonal)
                     document.getElementById("Personal").checked = false;
                     document.getElementById("Natours").checked = true;
                     document.getElementById('TabContent__Natours').animate([
