@@ -12,6 +12,7 @@ export default class Tabs extends Component {
     render() {
         return(
             <div id="master">
+                {this.animatePage()}
                 <div className="TabContent" id={this.props.id}>
                     <Container className="TabContent__header">{this.props.header}</Container>
                     <Container className="TabContent__images">
@@ -47,7 +48,6 @@ export default class Tabs extends Component {
                         </Container>
                     </Container>    
                 </div>
-                {this.animatePage()}
             </div>
         )
     }
