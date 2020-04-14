@@ -376,7 +376,7 @@
           margin-left: 10rem;
           text-align: start;
         }
-        padding-bottom: 3rem;
+        padding-bottom: 6rem;
 
       }
     }
@@ -387,9 +387,11 @@
 }
 
 .Tabs__option-btnContainer:hover ~.Tabs__option-text {
-  display: inline-block;
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+  @include respond(phone) {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 

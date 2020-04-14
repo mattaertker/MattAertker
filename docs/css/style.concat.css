@@ -573,17 +573,18 @@ a.intro-Contact-link {
         .TabContent__description-goal-left-2 {
           margin-left: 1rem; }
       .TabContent__description-goal-right {
-        padding-bottom: 3rem; }
+        padding-bottom: 6rem; }
         @media only screen and (min-width: 48em) {
           .TabContent__description-goal-right {
             margin-left: 10rem;
             text-align: start; } }
 
-.Tabs__option-btnContainer:hover ~ .Tabs__option-text {
-  display: inline-block;
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0); }
+@media only screen and (min-width: 37.5em) {
+  .Tabs__option-btnContainer:hover ~ .Tabs__option-text {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); } }
 
 .contactForm {
   position: relative; }
