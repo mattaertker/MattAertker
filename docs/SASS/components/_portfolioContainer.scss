@@ -387,7 +387,7 @@
 }
 
 .Tabs__option-btnContainer:hover ~.Tabs__option-text {
-  @include respond(phone) {
+  @include respond(tab-port) {
     display: inline-block;
     visibility: visible;
     opacity: 1;
