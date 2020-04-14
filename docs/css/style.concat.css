@@ -407,7 +407,7 @@ a.intro-Contact-link {
       cursor: pointer;
       position: relative;
       padding-left: 3.5rem;
-      line-height: 5px; }
+      line-height: 15px; }
   .Tabs__option-input:checked ~ .Tabs__option-label .Tabs__option-button::after {
     opacity: 1; }
 
@@ -429,7 +429,7 @@ a.intro-Contact-link {
     margin: 3rem 0 2rem 0;
     color: #fff;
     font-size: 80%;
-    padding: 0 1.5rem; }
+    padding: 0 2rem; }
   .TabContent__images-left {
     display: none; }
     @media only screen and (min-width: 75em) {
@@ -483,6 +483,7 @@ a.intro-Contact-link {
   .TabContent__description {
     color: #fff;
     font-size: 2rem;
+    padding-bottom: 6rem;
     max-width: 50rem; }
     @media only screen and (min-width: 56.25em) {
       .TabContent__description {
@@ -572,14 +573,12 @@ a.intro-Contact-link {
               transform: translateX(0); } }
         .TabContent__description-goal-left-2 {
           margin-left: 1rem; }
-      .TabContent__description-goal-right {
-        padding-bottom: 6rem; }
-        @media only screen and (min-width: 48em) {
-          .TabContent__description-goal-right {
-            margin-left: 10rem;
-            text-align: start; } }
+      @media only screen and (min-width: 48em) {
+        .TabContent__description-goal-right {
+          margin-left: 10rem;
+          text-align: start; } }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 56.25em) {
   .Tabs__option-btnContainer:hover ~ .Tabs__option-text {
     display: inline-block;
     visibility: visible;

@@ -101,9 +101,9 @@ export default class Tabs extends Component {
                     id="TabContent__Personal"
                     ipadImage={MattAIpad}
                     pers={true}
-                    techUsed={"The technologies I used for this project are React, and SCSS."}
-                    introText={"I began this project back January at the end of my winter break in order to get better at react and designing my own website!"}
-                    goal={"The goal of this project was to display all of my personal projects I have accomplished through my degree at CSU and personal experience!"}
+                    techUsed={"The technologies I am using for this project are React and SCSS."}
+                    introText={"Some challenges with this project were solidifying my knowledge of SCSS and React while also learning more about how to implement the necessary React or javascript for certain design aspects of the website!"}
+                    goal={"This project started in January 2020 with the goal of refining my skills in React for the purpose of designing a website that can showcase the various projects I've completed during my time at Colorado State University."}
                     visit={"https://mattaertker.github.io/MattAertker/"}
                     github={"https://github.com/mattaertker/MattAertker"} />
             )
@@ -116,9 +116,9 @@ export default class Tabs extends Component {
                     ipadImage={NatIpad}
                     nat={true}
                     id="TabContent__Natours"
-                    goal={"The goal of this project was to first get a decent baseground knowledge of advanced CSS before I moved into some more complex things!"}
-                    introText={"I began this project last summer in order to learn how to develope my own website and advanced CSS! "}
-                    techUsed={"The technologies I used for this project are HTML 5, and CSS."}
+                    goal={"This project began during the Summer of 2019 in order to develope a solid foundation of Advanced CSS so I could expand into more complex languages such as SCSS! This foundation in Advanced Css would also help as I went about designing my own website!"}
+                    introText={"My biggest challenge with this project was that I had to learn how to calculate em and rem (website width/height measurement units), along with many other intricate details and design tips for future projects!"}
+                    techUsed={"The technologies used for this project were HTML 5 and CSS."}
                     visit={"https://mattaertker.github.io/Natours/"}
                     github={"https://github.com/mattaertker/Natours"} />
 
@@ -132,9 +132,9 @@ export default class Tabs extends Component {
                     ipadImage={HotelIpad}
                     hot={true}
                     id="TabContent__Hotel"
-                    goal={"The goal of this project was to practice a second form of advanced SCSS with flexbox!"}
+                    goal={"This project was started during the Summer of 2019 with the goal of practicing a second form of Advanced SCSS with Flexbox while at the same time furthuring my knowledge of SVG's and animations!"}
                     techUsed={"The technologies I used for this project are HTML 5, and SCSS."}
-                    introText={"I began this project last summer in order to get better with SCSS, SVG's, and animations!"}
+                    introText={"My biggest challenge with this project was learning how to manipulate the SVG's, and how to make images responsive!"}
                     visit={"https://mattaertker.github.io/HotelSite/"}
                     github={"https://github.com/mattaertker/HotelSite"} />
             )
@@ -147,9 +147,9 @@ export default class Tabs extends Component {
                     ipadImage={G5Ipad}
                     med={true}
                     id="TabContent__Medicare"
-                    goal={"The goal of this website was to perform calculations for 5000 different hospital's medicare reimbursements!"}
-                    introText={"I did this project with 3 other group members, and it was one of my first big websites I developed for my web development class!"}
-                    techUsed={"The technologies I used for this project are HTML 5, Fuel MVC, javascript, and CSS."}
+                    goal={"This project was completed with 3 other group members in Spring of 2019 and was one of the first big website development projects I had! The goal of this website was to efficiently perform the calculations for 5000 different hospitals' Medicare Reimbursements."}
+                    introText={"The challenges I had for this project were that I had to learn how to connect a database to our project, manipulate images to look good on most devices, and perform some of the algorithms for the calculationss of the reimbursement!"}
+                    techUsed={"The technologies I used for this project are HTML 5, Fuel MVC, Javascript, jQuery, and CSS."}
                     visit={"https://www.cs.colostate.edu/~maertker/ct310/m4/index/project"} />
             )
         }
@@ -161,9 +161,9 @@ export default class Tabs extends Component {
                     ipadImage={bugZooIpad}
                     bug={true}
                     id="TabContent__BugZoo"
-                    goal={"The goal of this website is to provide information to the Bug zoo volunteer's at CSU about all the different species in the Zoo!"}
-                    introText={"This website is in progress, and is hopefully to be used by the CSU bug zoo volunteers as a guide for taking care of the bugs!"}
-                    techUsed={"The technologies I am using for this project are HTML 5, and SCSS."}
+                    goal={"Although currently in progress, this website will hopefully be used by the CSU Bug Zoo volunteers as a guide to effectively care for the various species of bugs at the Zoo!"}
+                    introText={"The main challenges I am having with this website are getting the accommodations for all disabilities within this website to work so it can be used by volunteers for the CSU bug zoo!"}
+                    techUsed={"The technologies I am using for this project are HTML 5 and SCSS."}
                     visit={"https://mattaertker.github.io/BugZooVolunteers/"}
                     github={"https://github.com/mattaertker/BugZooVolunteers"} />
             )
