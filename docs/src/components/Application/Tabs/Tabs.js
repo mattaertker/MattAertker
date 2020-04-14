@@ -90,8 +90,8 @@ export default class Tabs extends Component {
     }
 
     renderTabs() {
-        if (!this.state.userClick)
-            this.displayDiv();
+        // if (!this.state.userClick)
+        //     this.displayDiv();
 
         if (this.state.isPersonal) {
             return (
@@ -241,12 +241,12 @@ export default class Tabs extends Component {
                         isMedicare: false,
                         isBugZoo: false,
                     });
-                    document.getElementById("Personal").checked = false;
-                    document.getElementById("Natours").checked = true;
-                    document.getElementById('TabContent__Natours').animate([
-                        { opacity: 0, transform: 'translateY(5rem)' },
-                        { opacity: 1, transform: 'translateY(0)' }
-                    ], 2000);
+                    // document.getElementById("Personal").checked = false;
+                    // document.getElementById("Natours").checked = true;
+                    // document.getElementById('TabContent__Natours').animate([
+                    //     { opacity: 0, transform: 'translateY(5rem)' },
+                    //     { opacity: 1, transform: 'translateY(0)' }
+                    // ], 2000);
                     this.rotateToMedicare();
                 }
             }, 5000);
@@ -264,12 +264,12 @@ export default class Tabs extends Component {
                         isMedicare: true,
                         isBugZoo: false,
                     })
-                    document.getElementById("Natours").checked = false;
-                    document.getElementById("MedicareReimbursements").checked = true;
-                    document.getElementById('TabContent__Medicare').animate([
-                        { opacity: 0, transform: 'translateY(5rem)' },
-                        { opacity: 1, transform: 'translateY(0)' }
-                    ], 2000);
+                    // document.getElementById("Natours").checked = false;
+                    // document.getElementById("MedicareReimbursements").checked = true;
+                    // document.getElementById('TabContent__Medicare').animate([
+                    //     { opacity: 0, transform: 'translateY(5rem)' },
+                    //     { opacity: 1, transform: 'translateY(0)' }
+                    // ], 2000);
                     this.rotateToHotel();
                 }
             }, 5000);
@@ -287,12 +287,12 @@ export default class Tabs extends Component {
                         isMedicare: false,
                         isBugZoo: false,
                     })
-                    document.getElementById("MedicareReimbursements").checked = false;
-                    document.getElementById("Hotel").checked = true;
-                    document.getElementById('TabContent__Hotel').animate([
-                        { opacity: 0, transform: 'translateY(5rem)' },
-                        { opacity: 1, transform: 'translateY(0)' }
-                    ], 2000);
+                    // document.getElementById("MedicareReimbursements").checked = false;
+                    // document.getElementById("Hotel").checked = true;
+                    // document.getElementById('TabContent__Hotel').animate([
+                    //     { opacity: 0, transform: 'translateY(5rem)' },
+                    //     { opacity: 1, transform: 'translateY(0)' }
+                    // ], 2000);
                     this.rotateToBugZoo();
                 }
             }, 5000);
@@ -310,12 +310,12 @@ export default class Tabs extends Component {
                         isMedicare: false,
                         isBugZoo: true,
                     })
-                    document.getElementById("Hotel").checked = false;
-                    document.getElementById("CsuBugZoo").checked = true;
-                    document.getElementById('TabContent__BugZoo').animate([
-                        { opacity: 0, transform: 'translateY(5rem)' },
-                        { opacity: 1, transform: 'translateY(0)' }
-                    ], 2000);
+                    // document.getElementById("Hotel").checked = false;
+                    // document.getElementById("CsuBugZoo").checked = true;
+                    // document.getElementById('TabContent__BugZoo').animate([
+                    //     { opacity: 0, transform: 'translateY(5rem)' },
+                    //     { opacity: 1, transform: 'translateY(0)' }
+                    // ], 2000);
                     this.rotateToPersonal();
                 }
             }, 5000);
@@ -333,12 +333,12 @@ export default class Tabs extends Component {
                         isMedicare: false,
                         isBugZoo: false,
                     })
-                    document.getElementById("CsuBugZoo").checked = false;
-                    document.getElementById("Personal").checked = true;
-                    document.getElementById('TabContent__Personal').animate([
-                        { opacity: 0, transform: 'translateY(5rem)' },
-                        { opacity: 1, transform: 'translateY(0)' }
-                    ], 2000);
+                    // document.getElementById("CsuBugZoo").checked = false;
+                    // document.getElementById("Personal").checked = true;
+                    // document.getElementById('TabContent__Personal').animate([
+                    //     { opacity: 0, transform: 'translateY(5rem)' },
+                    //     { opacity: 1, transform: 'translateY(0)' }
+                    // ], 2000);
                     // this.displayDiv();
                 }
             }, 5000);
