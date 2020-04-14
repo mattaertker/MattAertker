@@ -47,7 +47,7 @@ export default class Tabs extends Component {
                         </Container>
                     </Container>    
                 </div>
-                {this.animatePage()}
+                {/* {this.animatePage()} */}
             </div>
         )
     }
