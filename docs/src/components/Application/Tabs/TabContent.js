@@ -47,37 +47,37 @@ export default class Tabs extends Component {
                         </Container>
                     </Container>    
                 </div>
-                {this.animatePage()}
+                {/* {this.animatePage()} */}
             </div>
         )
     }
 
-    animatePage() {
-        if (document.getElementById('TabContent__Personal') && document.getElementsByClassName("TabContent"))
-        {
-            document.getElementById('TabContent__Personal').animate([
-                {opacity: 0,transform: 'translateY(5rem)'},
-                {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);}
-        if (document.getElementById('TabContent__Natours')  && document.getElementsByClassName("TabContent")) {
-            document.getElementById('TabContent__Natours').animate([
-                {opacity: 0,transform: 'translateY(5rem)'},
-                {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);}
-        if (document.getElementById('TabContent__Medicare')  && document.getElementsByClassName("TabContent")){
-            document.getElementById('TabContent__Medicare').animate([
-                {opacity: 0,transform: 'translateY(5rem)'},
-                {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);}
-        if (document.getElementById('TabContent__Hotel')  && document.getElementsByClassName("TabContent")){
-            document.getElementById('TabContent__Hotel').animate([
-                {opacity: 0,transform: 'translateY(5rem)'},
-                {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);}
-        if (document.getElementById('TabContent__BugZoo')  && document.getElementsByClassName("TabContent")){
-            document.getElementById('TabContent__BugZoo').animate([
-                {opacity: 0,transform: 'translateY(5rem)'},
-                {opacity: 1,transform: 'translateY(0)'}
-            ], 2000);}
-    }
+    // animatePage() {
+    //     if (document.getElementById('TabContent__Personal') && document.getElementsByClassName("TabContent"))
+    //     {
+    //         document.getElementById('TabContent__Personal').animate([
+    //             {opacity: 0,transform: 'translateY(5rem)'},
+    //             {opacity: 1,transform: 'translateY(0)'}
+    //         ], 2000);}
+    //     if (document.getElementById('TabContent__Natours')  && document.getElementsByClassName("TabContent")) {
+    //         document.getElementById('TabContent__Natours').animate([
+    //             {opacity: 0,transform: 'translateY(5rem)'},
+    //             {opacity: 1,transform: 'translateY(0)'}
+    //         ], 2000);}
+    //     if (document.getElementById('TabContent__Medicare')  && document.getElementsByClassName("TabContent")){
+    //         document.getElementById('TabContent__Medicare').animate([
+    //             {opacity: 0,transform: 'translateY(5rem)'},
+    //             {opacity: 1,transform: 'translateY(0)'}
+    //         ], 2000);}
+    //     if (document.getElementById('TabContent__Hotel')  && document.getElementsByClassName("TabContent")){
+    //         document.getElementById('TabContent__Hotel').animate([
+    //             {opacity: 0,transform: 'translateY(5rem)'},
+    //             {opacity: 1,transform: 'translateY(0)'}
+    //         ], 2000);}
+    //     if (document.getElementById('TabContent__BugZoo')  && document.getElementsByClassName("TabContent")){
+    //         document.getElementById('TabContent__BugZoo').animate([
+    //             {opacity: 0,transform: 'translateY(5rem)'},
+    //             {opacity: 1,transform: 'translateY(0)'}
+    //         ], 2000);}
+    // }
 }
