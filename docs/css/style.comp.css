@@ -407,7 +407,8 @@ a.intro-Contact-link {
       cursor: pointer;
       position: relative;
       padding-left: 3.5rem;
-      line-height: 15px; }
+      line-height: 18px;
+      height: 10px; }
   .Tabs__option-input:checked ~ .Tabs__option-label .Tabs__option-button::after {
     opacity: 1; }
 
