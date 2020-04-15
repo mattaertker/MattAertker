@@ -117,7 +117,7 @@ export default class Tabs extends Component {
                     nat={true}
                     id="TabContent__Natours"
                     goal={"This project began during the Summer of 2019 in order to develop a solid foundation of Advanced CSS in order to expand into more complex languages such as SCSS. This foundation in Advanced CSS also helped as I went about designing my own website."}
-                    introText={"My biggest challenge with this project was learning how to calculate em and rem (website width/height measurement units), along with many other intricate details and design tips for future projects."}
+                    introText={"The biggest challenge with this project was learning how to calculate em and rem (website width/height measurement units), along with many other intricate details and design tips for future projects."}
                     techUsed={"The technologies used for this project were HTML 5 and CSS."}
                     visit={"https://mattaertker.github.io/Natours/"}
                     github={"https://github.com/mattaertker/Natours"} />
@@ -134,7 +134,7 @@ export default class Tabs extends Component {
                     id="TabContent__Hotel"
                     goal={"This project was started during the Summer of 2019 with the goal of practicing a second form of Advanced SCSS with Flexbox while at the same time furthuring my knowledge of SVG's and animations."}
                     techUsed={"The technologies used for this project were HTML 5 and SCSS."}
-                    introText={"My biggest challenge with this project was learning how to manipulate the SVG's and how to make images responsive."}
+                    introText={"The biggest challenge with this project was learning how to manipulate the SVG's and how to make images responsive."}
                     visit={"https://mattaertker.github.io/HotelSite/"}
                     github={"https://github.com/mattaertker/HotelSite"} />
             )
