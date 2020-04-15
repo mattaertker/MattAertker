@@ -101,7 +101,7 @@ export default class Tabs extends Component {
                     id="TabContent__Personal"
                     ipadImage={MattAIpad}
                     pers={true}
-                    techUsed={"The technologies used for this project are React and SCSS."}
+                    techUsed={"The technologies being used for this project are React and SCSS."}
                     introText={"Some challenges with this project were solidifying my knowledge of SCSS and React while also learning more about how to implement the necessary React or javascript for certain design aspects of the website."}
                     goal={"This project started in January of 2020 with the goal of refining my skills in React for the purpose of designing a website that can showcase the various projects I've completed during my time at Colorado State University."}
                     visit={"https://mattaertker.github.io/MattAertker/"}
