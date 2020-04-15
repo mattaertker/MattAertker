@@ -116,7 +116,7 @@ export default class Tabs extends Component {
                     ipadImage={NatIpad}
                     nat={true}
                     id="TabContent__Natours"
-                    goal={"This project began during the Summer of 2019 in order to develop a solid foundation of Advanced CSS so I could expand into more complex languages such as SCSS. This foundation in Advanced CSS also helped as I went about designing my own website."}
+                    goal={"This project began during the Summer of 2019 in order to develop a solid foundation of Advanced CSS in order to expand into more complex languages such as SCSS. This foundation in Advanced CSS also helped as I went about designing my own website."}
                     introText={"My biggest challenge with this project was learning how to calculate em and rem (website width/height measurement units), along with many other intricate details and design tips for future projects."}
                     techUsed={"The technologies used for this project were HTML 5 and CSS."}
                     visit={"https://mattaertker.github.io/Natours/"}
