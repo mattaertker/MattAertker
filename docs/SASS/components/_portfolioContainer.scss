@@ -116,6 +116,9 @@
   &__option-input:checked ~ &__option-label &__option-button::after {
     opacity: 1;
   }
+  &__option-input:checked ~ .TabContent {
+    animation: moveInBottom2 2s ease-out ;
+  }
 }
 
 
@@ -129,7 +132,7 @@
   transition: all 2s;
   // height: 140rem; 
   width: 100%;
-  animation: moveInBottom2 2s ease-out ;
+  animation: moveInBottom2 2s ease-out;
   margin-top: 25%;
   // background-color: orangered;
   @include respond(nav) {
@@ -241,6 +244,7 @@
     color: $color-white;
     font-size: $fontSize-2;
     padding-bottom: 6rem;
+    // padding-left: 2rem;
       max-width: 50rem;
 
       @include respond(tab-port) {
@@ -253,7 +257,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 0 2rem;
+      padding: 0 1rem;
       margin-top: 8rem;
 
       @include respond(nav) {
@@ -274,10 +278,17 @@
 
       &-right {
         margin-top: 2rem;
+        text-align: start;
+        padding-left: 5rem;
+        padding-right: 2rem;
+
         
         @include respond(nav) {
           margin-left: 5rem;
-          text-align: start;
+          padding-left: 0;
+          padding-right: 0;
+
+          // text-align: start;
         }
         
 
@@ -287,7 +298,7 @@
 
     &-intro {
       margin-top: 5rem;
-      padding: 0 2rem;
+      padding: 0 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -323,10 +334,16 @@
         font-size: $fontSize-2;
         
         margin-top: 2rem;
+        text-align: start;
+        padding-left: 5rem;
+        padding-right: 2rem;
+
       
         @include respond(nav) {
           margin-left: 5rem;
-          text-align: start;
+          padding-right: 0;
+          padding-left: 0;
+          // text-align: start;
         }
 
       }
@@ -339,7 +356,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 0 2rem;
+      padding: 0 1rem;
       @include respond(nav) {
         flex-direction: row;
       }
@@ -374,7 +391,12 @@
       }
 
       &-right {
+        text-align: start;
+        padding-left: 5rem;
+        padding-right: 2rem;
         @include respond(nav) {
+          padding-left: 0;
+          padding-right: 0;
           margin-left: 10rem;
           text-align: start;
         }

@@ -133,8 +133,8 @@ export default class Tabs extends Component {
                     hot={true}
                     id="TabContent__Hotel"
                     goal={"This project was started during the Summer of 2019 with the goal of practicing a second form of Advanced SCSS with Flexbox while at the same time furthuring my knowledge of SVG's and animations."}
-                    techUsed={"The technologies I used for this project are HTML 5, and SCSS."}
-                    introText={"My biggest challenge with this project was learning how to manipulate the SVG's, and how to make images responsive."}
+                    techUsed={"The technologies I used for this project are HTML 5 and SCSS."}
+                    introText={"My biggest challenge with this project was learning how to manipulate the SVG's and how to make images responsive."}
                     visit={"https://mattaertker.github.io/HotelSite/"}
                     github={"https://github.com/mattaertker/HotelSite"} />
             )
