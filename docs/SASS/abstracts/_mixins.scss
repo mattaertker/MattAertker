@@ -29,6 +29,9 @@
   @if $breakpoint == weirdIpad {
     @media only screen and (min-width: 87.5em) { @content };    //1400px
   }
+  @if $breakpoint == midBreak {
+    @media only screen and (min-width: 93.75em) { @content };    //1500px
+  }
   @if $breakpoint == weirdIpad2 {
     @media only screen and (min-width: 100em) { @content };    //1600px
   }

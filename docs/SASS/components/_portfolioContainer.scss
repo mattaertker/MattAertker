@@ -117,11 +117,18 @@
     opacity: 1;
   }
   &__option-input:checked ~ .TabContent {
-    animation: moveInBottom2 2s ease-out ;
+    animation: moveInBottom2 2s ease-out;
   }
+  
 }
 
+// #TabContent__Personal {
+//   animation: moveInBottom2 2s ease-out;
+// }
 
+// #TabContent__Natours {
+//   animation: moveInBottom2 2s ease-out;
+// }
 .TabContent {
   position: absolute;
   display: flex;
@@ -409,6 +416,10 @@
 
 
 }
+
+// .Tabs__option-input:checked ~.TabContent  {
+//   animation: moveInBottom 2s ease-out ;
+// }
 
 .Tabs__option-btnContainer:hover ~.Tabs__option-text {
   @include respond(tab-port) {

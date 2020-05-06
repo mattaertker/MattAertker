@@ -1,0 +1,62 @@
+.row {
+    display: flex;
+    &-topTech:not(:last-child) {
+        margin-top: 5rem;
+    }
+    &-topTech {
+        margin-bottom: 5rem;
+        flex-direction: column;
+        @include respond(phone) {
+            flex-direction: row;
+            justify-content: center;
+        }
+        @include respond(tab-land) {
+            margin-bottom: 10rem;
+        }
+    }
+
+    &-cert {
+        @include respond(weirdIpad) {
+            flex-direction: row;
+            display: flex;
+        }
+    }
+}
+
+.col {
+
+    &-1-of-4:not(:last-child) {
+        margin-bottom: 5rem;       
+        @include respond(weirdIpad) {
+            margin-right: 15rem;
+            margin-bottom: 15rem;
+        }
+        @include respond(midBreak) {
+            margin-right: 20rem;
+            margin-bottom: 20rem;
+        }
+    }
+
+    &-1-of-4 {
+        margin-bottom: 5rem; 
+    }
+
+
+    &-1-of-5:not(:last-child) {
+        margin-right: 0;
+        @include respond(phone) {
+            margin-right: 3rem;
+        }
+        @include respond(tab-land) {
+            margin-right: 10rem;
+        }
+    }
+    &-1-of-5 {
+        margin-bottom: 3rem;
+        @include respond(phone) {
+            margin-bottom: 0;
+        }
+    }
+
+    
+}

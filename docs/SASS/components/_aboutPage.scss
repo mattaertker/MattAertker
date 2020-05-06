@@ -1,64 +1,157 @@
 .About {
-  width: 100%;
-  &--Container {
-    width: 100%;
-    padding: 5rem 0 20rem 0;
+  width: 100vw;
+
+  &__top {
     @include respond(phone) {
-      padding: 10rem 0 30rem 0;
+      height: 90vh;
     }
-    @include respond(nav) {
-      padding: 10rem 0 50rem 0;
-    }
-    @include respond(tab-port){
-      padding: 10rem 0 50rem 0;
-    }
-    background-image: linear-gradient(to top right,$color-secondary,$color-primary);
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  &__cards {
-    z-index: 100;
-    color: white;
-    position: relative;
-    width: 95%;
-    margin: 10rem 0 5rem 0;
-    @include respond(phone) {
-      width: 70%;
-    }
-    @include respond(tab-port) {
-      width: 50%;
-    }
-    font-size: $fontSize-2;
-    border: 1px solid $color-white;
-    border-radius: 2rem;
-
-    &-header {
-      font-size: $fontSize-3;
-      padding-top: 2rem;
-    }
-
-    &-text {
-      padding: 0 1rem 1rem 1rem;
-      &-Bio {
-        text-align: start;
-        padding: 0 2rem 2rem 2rem;
+    background-image: linear-gradient(to bottom right, rgba($color-primary, .6), rgba($color-secondary, .6)),
+                        url("/images/ariaWinnie2.JPG") ;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+      @include respond(nav) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
 
-    }
+    &-container {
+      animation: moveInBottom 2s ease-out;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
 
-    &-img {
-      width: 20rem;
-      height: 20rem;
-      padding: 2rem;
-      border-radius: 50%;
-      @include respond(tab-land) {
+      @include respond(nav) {
+        align-items: flex-start;
+        background-color: rgba($color-white, .3);
+        height: 50rem;
+        width: 20rem;
+        max-width: 100rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+        margin-right: 5rem;
+      }
+
+      @include respond(tab-port) {
+        height: 50rem;
         width: 30rem;
-        height: 30rem;
+        margin-right: 10rem;
       }
+      @include respond(tab-land) {
+        margin-right: 20rem;
+      }
+  
+
+      &-text {
+        line-height: 2rem;
+        max-width: 30rem;
+        text-align: start;
+        padding: 2rem;
+        font-size: 2rem;
+        color: rgba($color-white, .8);
+
+        @include respond(tab-port) {
+          line-height: normal;
+        }
+      }
+
+
     }
   }
+
+  &__certificates {
+    padding: 10rem 0;
+    background-color: #fff;
+
+    
+    @include respond(phone) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+    }
+
+
+    &-line {
+      margin-left: 10%;
+      width: 80%;
+      border-bottom: 5px solid black;
+    }
+  }
+  &__mid {
+    &-border {
+      width: 80%;
+      margin-left: 10%;
+      border-bottom: 5px solid black;
+      margin-bottom: 3rem;
+    }
+  }
+  &__bottom {
+    //TODO: fix height to not be fixed
+    height: 50vh;
+  }
+  // &--Container {
+  //   width: 100%;
+  //   padding: 5rem 0 20rem 0;
+  //   @include respond(phone) {
+  //     padding: 10rem 0 30rem 0;
+  //   }
+  //   @include respond(nav) {
+  //     padding: 10rem 0 50rem 0;
+  //   }
+  //   @include respond(tab-port){
+  //     padding: 10rem 0 50rem 0;
+  //   }
+  //   background-image: linear-gradient(to top right,$color-secondary,$color-primary);
+  //   position: absolute;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  // }
+
+  // &__cards {
+  //   z-index: 100;
+  //   color: white;
+  //   position: relative;
+  //   width: 95%;
+  //   margin: 10rem 0 5rem 0;
+  //   @include respond(phone) {
+  //     width: 70%;
+  //   }
+  //   @include respond(tab-port) {
+  //     width: 50%;
+  //   }
+  //   font-size: $fontSize-2;
+  //   border: 1px solid $color-white;
+  //   border-radius: 2rem;
+
+  //   &-header {
+  //     font-size: $fontSize-3;
+  //     padding-top: 2rem;
+  //   }
+
+  //   &-text {
+  //     padding: 0 1rem 1rem 1rem;
+  //     &-Bio {
+  //       text-align: start;
+  //       padding: 0 2rem 2rem 2rem;
+  //     }
+
+  //   }
+
+  //   &-img {
+  //     width: 20rem;
+  //     height: 20rem;
+  //     padding: 2rem;
+  //     border-radius: 50%;
+  //     @include respond(tab-land) {
+  //       width: 30rem;
+  //       height: 30rem;
+  //     }
+  //   }
+  // }
 }

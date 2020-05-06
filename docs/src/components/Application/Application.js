@@ -14,11 +14,14 @@ export default class Application extends Component {
 
         this.state = {
             serverConfig: null,
+            currentWindowWidth: window.innerWidth,
             clientSettings: {
                 serverPort: getOriginalServerPort()
             },
             errorMessage: null
         };
+        this.windowSizeChange = this.windowSizeChange.bind(this);
+        window.addEventListener('resize', this.windowSizeChange);
     }
     render() {
         // let pageToRender = this.state.serverConfig ? this.props.page : 'settings';
@@ -47,7 +50,7 @@ export default class Application extends Component {
             case 'about':
                 return (
                     <div>
-                        <About/>
+                        <About windowSizeChange={this.state.currentWindowWidth}/>
                     </div>);
             default:
                 return <Home pages={this.props.pages}
@@ -74,6 +77,10 @@ export default class Application extends Component {
             });
         }
     }
+
+    windowSizeChange() {
+        this.setState({currentWindowWidth: window.innerWidth});
+    };
 
 
 }

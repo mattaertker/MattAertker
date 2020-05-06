@@ -16,3 +16,13 @@
   animation: moveInBottom 1s ease-in;
   animation-fill-mode: backwards;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-75 {
+  margin-top: 75%;
+}

@@ -11,7 +11,7 @@ export default class TabsOption extends Component {
         return (
             <Container className="Tabs__option">
                                 <input type="radio" className="Tabs__option-input" 
-                                id={this.props.id} name="project" onChange={this.props.toggle}/>
+                                id={this.props.id} name="project" onChange={this.props.toggle} checked={this.props.state}/>
                                 <label htmlFor={this.props.id} className="Tabs__option-label">
                                     <span className="Tabs__option-btnContainer">
                                         <span className="Tabs__option-button"></span>

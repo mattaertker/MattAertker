@@ -31,12 +31,12 @@ export default class Tabs extends Component {
         this.toggleMedicare = this.toggleMedicare.bind(this);
         this.toggleHotel = this.toggleHotel.bind(this);
         this.toggleBugZoo = this.toggleBugZoo.bind(this);
-        // this.displayDiv = this.displayDiv.bind(this);
+        this.displayDiv = this.displayDiv.bind(this);
         // this.toggleFlightTrip = this.toggleFlightTrip.bind(this);
-        // this.rotateToMedicare = this.rotateToMedicare.bind(this);
-        // this.rotateToHotel = this.rotateToHotel.bind(this);
-        // this.rotateToPersonal = this.rotateToPersonal.bind(this);
-        // this.rotateToBugZoo = this.rotateToBugZoo.bind(this);
+        this.rotateToMedicare = this.rotateToMedicare.bind(this);
+        this.rotateToHotel = this.rotateToHotel.bind(this);
+        this.rotateToPersonal = this.rotateToPersonal.bind(this);
+        this.rotateToBugZoo = this.rotateToBugZoo.bind(this);
         this.togglePersonal = this.togglePersonal.bind(this);
         this.state = {
             isPersonal: true,
@@ -57,30 +57,23 @@ export default class Tabs extends Component {
                 {this.renderTabs()}
                 {/* {this.displayDiv()} */}
                 <Container className="Tabs">
-                    <Container className="Tabs__option">
-                        <input type="radio" className="Tabs__option-input"
-                            id="Personal" name="project" onChange={this.togglePersonal} checked={this.state.isPersonal ? this.state.isPersonal : null} />
-                        <label htmlFor="Personal" className="Tabs__option-label">
-                            <span className="Tabs__option-btnContainer">
-                                <span className="Tabs__option-button"></span>
-                            </span>
-                            <span className="Tabs__option-text" id="Tabs__option-text" style={{ paddingLeft: "3rem" }}>Personal Site</span>
-                        </label>
-                    </Container>
+                    <TabsOption toggle={this.togglePersonal}
+                        id="Personal"
+                        header="Personal" state={this.state.isPersonal} />
                     <TabsOption toggle={this.toggleNatours}
                         id="Natours"
-                        header="Natours" />
+                        header="Natours" state={this.state.isNatours}/>
                     <TabsOption toggle={this.toggleMedicare}
                         id="MedicareReimbursements"
                         header="Medicare Reimbursements"
-                        paddingLeft="4rem" />
+                        paddingLeft="4rem" state={this.state.isMedicare}/>
                     <TabsOption toggle={this.toggleHotel}
                         id="Hotel"
-                        header="Hotel" />
+                        header="Hotel" state={this.state.isHotel}/>
                     <TabsOption toggle={this.toggleBugZoo}
                         id="CsuBugZoo"
                         header="CSU bug zoo volunteers"
-                        paddingLeft="5rem" />
+                        paddingLeft="5rem" state={this.state.isBugZoo}/>
                 </Container>
             </div>
 
@@ -110,6 +103,7 @@ export default class Tabs extends Component {
         }
         if (this.state.isNatours) {
             return (
+                <div>
                 <TabContent header="Natours"
                     macImage={Natours}
                     iphoneImage={NatIphone}
@@ -121,6 +115,8 @@ export default class Tabs extends Component {
                     techUsed={"The technologies used for this project were HTML 5 and CSS."}
                     visit={"https://mattaertker.github.io/Natours/"}
                     github={"https://github.com/mattaertker/Natours"} />
+                    {/* {this.animatePage("TabContent__Natours")} */}
+                    </div>
 
             )
         }
@@ -141,6 +137,7 @@ export default class Tabs extends Component {
         }
         if (this.state.isMedicare) {
             return (
+                <div>
                 <TabContent header="Medicare Reimbursements"
                     macImage={Medicare}
                     iphoneImage={MedicareIphone}
@@ -151,10 +148,13 @@ export default class Tabs extends Component {
                     introText={"The challenges faced for this project were laerning how to connect a database to our project, manipulate images to look good on most devices, and perform some of the algorithms for the calculationss of the reimbursement."}
                     techUsed={"The technologies used for this project were HTML 5, Fuel MVC, Javascript, jQuery, and CSS."}
                     visit={"https://www.cs.colostate.edu/~maertker/ct310/m4/index/project"} />
+                    {/* {this.animatePage("TabContent__Medicare")} */}
+                    </div>
             )
         }
         if (this.state.isBugZoo) {
             return (
+                <div>
                 <TabContent header="CSU Bug Zoo"
                     macImage={BugZoo}
                     iphoneImage={bugZooIphone}
@@ -166,13 +166,32 @@ export default class Tabs extends Component {
                     techUsed={"The technologies being used for this project are HTML 5 and SCSS."}
                     visit={"https://mattaertker.github.io/BugZooVolunteers/"}
                     github={"https://github.com/mattaertker/BugZooVolunteers"} />
+                    {/* {this.animatePage("TabContent__BugZoo")} */}
+                    </div>
             )
         }
         document.getElementsByClassName("TabContent").style.opacity = 1;
         return null;
     }
 
+    // animatePage(id) {
+    //     // setTimeout(() => {
+    //         if (document.getElementById(id)) {
+    //             console.log("pers")
+    //             document.getElementById(id).animate([
+    //                 { opacity: 0, transform: 'translateY(5rem)' },
+    //                 { opacity: 1, transform: 'translateY(0)' }
+    //             ], 2000);
+    //         }
+    //         else {
+    //             console.log("didn't do shit")
+    //             return;
+    //         }
+    //     // },1000);
+    // }
+
     togglePersonal() {
+        console.log("going to pers: " + this.state.isPersonal);
         this.setState({
             isPersonal: true,
             isNatours: false,
@@ -185,6 +204,7 @@ export default class Tabs extends Component {
     }
 
     toggleNatours() {
+        console.log("going to nat: " + this.state.isNatours);
         this.setState({
             isPersonal: false,
             isNatours: true,
@@ -197,6 +217,7 @@ export default class Tabs extends Component {
     }
 
     toggleHotel() {
+        console.log("going to hotel: " + this.state.isHotel);
         this.setState({
             isPersonal: false,
             isNatours: false,
@@ -209,6 +230,7 @@ export default class Tabs extends Component {
     }
 
     toggleMedicare() {
+        console.log("going to med: " + this.state.isMedicare);
         this.setState({
             isPersonal: false,
             isNatours: false,
@@ -220,6 +242,7 @@ export default class Tabs extends Component {
         });
     }
     toggleBugZoo() {
+        console.log("going to bug: " + this.state.isBugZoo);
         this.setState({
             isPersonal: false,
             isNatours: false,
@@ -243,10 +266,10 @@ export default class Tabs extends Component {
                     });
                     document.getElementById("Personal").checked = false;
                     document.getElementById("Natours").checked = true;
-                    // document.getElementById('TabContent__Natours').animate([
-                    //     { opacity: 0, transform: 'translateY(5rem)' },
-                    //     { opacity: 1, transform: 'translateY(0)' }
-                    // ], 2000);
+                    document.getElementById('TabContent__Natours').animate([
+                        { opacity: 0, transform: 'translateY(5rem)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], 2000);
                     this.rotateToMedicare();
                 }
             }, 5000);
@@ -266,10 +289,10 @@ export default class Tabs extends Component {
                     })
                     document.getElementById("Natours").checked = false;
                     document.getElementById("MedicareReimbursements").checked = true;
-                    // document.getElementById('TabContent__Medicare').animate([
-                    //     { opacity: 0, transform: 'translateY(5rem)' },
-                    //     { opacity: 1, transform: 'translateY(0)' }
-                    // ], 2000);
+                    document.getElementById('TabContent__Medicare').animate([
+                        { opacity: 0, transform: 'translateY(5rem)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], 2000);
                     this.rotateToHotel();
                 }
             }, 5000);
@@ -289,10 +312,10 @@ export default class Tabs extends Component {
                     })
                     document.getElementById("MedicareReimbursements").checked = false;
                     document.getElementById("Hotel").checked = true;
-                    // document.getElementById('TabContent__Hotel').animate([
-                    //     { opacity: 0, transform: 'translateY(5rem)' },
-                    //     { opacity: 1, transform: 'translateY(0)' }
-                    // ], 2000);
+                    document.getElementById('TabContent__Hotel').animate([
+                        { opacity: 0, transform: 'translateY(5rem)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], 2000);
                     this.rotateToBugZoo();
                 }
             }, 5000);
@@ -312,10 +335,10 @@ export default class Tabs extends Component {
                     })
                     document.getElementById("Hotel").checked = false;
                     document.getElementById("CsuBugZoo").checked = true;
-                    // document.getElementById('TabContent__BugZoo').animate([
-                    //     { opacity: 0, transform: 'translateY(5rem)' },
-                    //     { opacity: 1, transform: 'translateY(0)' }
-                    // ], 2000);
+                    document.getElementById('TabContent__BugZoo').animate([
+                        { opacity: 0, transform: 'translateY(5rem)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], 2000);
                     this.rotateToPersonal();
                 }
             }, 5000);
@@ -335,10 +358,10 @@ export default class Tabs extends Component {
                     })
                     document.getElementById("CsuBugZoo").checked = false;
                     document.getElementById("Personal").checked = true;
-                    // document.getElementById('TabContent__Personal').animate([
-                    //     { opacity: 0, transform: 'translateY(5rem)' },
-                    //     { opacity: 1, transform: 'translateY(0)' }
-                    // ], 2000);
+                    document.getElementById('TabContent__Personal').animate([
+                        { opacity: 0, transform: 'translateY(5rem)' },
+                        { opacity: 1, transform: 'translateY(0)' }
+                    ], 2000);
                     // this.displayDiv();
                 }
             }, 5000);
