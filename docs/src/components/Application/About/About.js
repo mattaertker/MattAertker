@@ -22,14 +22,17 @@ export default class About extends Component {
     render() {
         return (
             <Container id="About" className="About">
-                <Container className="About__top" >
+                <Container className="About__top" > {/* style={{backgroundImage: "linear-gradient(to bottom right, rgba($color-primary, .6), rgba($color-secondary, .6)), url('/images/ariaWinnie2.JPG')",
+                                                                                backgroundPosition: 'center',
+                                                                                backgroundSize: 'cover',
+                                                                                backgroundRepeat: 'no-repeat'}}> */}
                     {/* <Container className="About__top-image"></Container> */}
                     <Container className="About__top-container">
                         <Container className="About__top-container-text">
                             Hey, my name is Matt Aertker, and I am a rising software developer/engineer! 
                             I work on things like the arduino, such as openbuild's blackbox, and even executable 
-                            programs! My specialty is in front end web development, focusing in technologies such as
-                            React and SCSS.
+                            programs! My specialty is in front end web development, 
+                            focusing in technologies such as React and SCSS.
                         </Container>
                     </Container>
                     
