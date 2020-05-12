@@ -97,23 +97,39 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background-color: #f7f7f7; }
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/images/intro.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
   .intro-text {
-    text-align: center;
+    float: left;
+    text-align: left;
     font-size: 2rem;
     padding: 15rem 1rem 0 1rem;
-    max-width: 100rem; }
+    margin-left: 3rem;
+    max-width: 30rem; }
     @media only screen and (min-width: 37.5em) {
       .intro-text {
-        font-size: 2.5rem;
+        font-size: 3rem;
         padding: 15rem 2rem 0 2rem; } }
     @media only screen and (min-width: 112.5em) {
       .intro-text {
         font-size: 3rem; } }
+    @media only screen and (min-width: 37.5em) {
+      .intro-text {
+        max-width: 40rem; } }
+    @media only screen and (min-width: 56.25em) {
+      .intro-text {
+        max-width: 60rem;
+        margin-left: 8rem; } }
   .intro-button {
+    margin-left: 4rem;
     margin-bottom: 15rem; }
+    @media only screen and (min-width: 56.25em) {
+      .intro-button {
+        margin-left: 9rem; } }
   .intro--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; }
@@ -297,14 +313,14 @@ a.intro-Contact-link {
 .About {
   width: 100vw; }
   .About__top {
-    background-image: linear-gradient(to bottom right, rgba(29, 17, 96, 0.6), rgba(0, 120, 140, 0.6)), url("/MattAertker/images/ariaWinnie2.jpg");
+    background-image: linear-gradient(to bottom right, rgba(29, 17, 96, 0.6), rgba(0, 120, 140, 0.6)), url("/images/ariaWinnie2.jpg");
     height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
     @media only screen and (min-width: 37.5em) {
       .About__top {
-        height: 90vh; } }
+        height: 95vh; } }
     @media only screen and (min-width: 48em) {
       .About__top {
         display: flex;
@@ -344,7 +360,7 @@ a.intro-Contact-link {
           .About__top-container-text {
             line-height: normal; } }
   .About__certificates {
-    padding: 10rem 0;
+    padding-top: 10rem;
     background-color: #fff; }
     @media only screen and (min-width: 37.5em) {
       .About__certificates {
@@ -353,7 +369,6 @@ a.intro-Contact-link {
         align-items: center;
         flex-direction: column; } }
     .About__certificates-line {
-      margin-left: 10%;
       width: 80%;
       border-bottom: 5px solid black; }
   .About__mid-border {

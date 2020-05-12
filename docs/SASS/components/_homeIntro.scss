@@ -3,27 +3,45 @@
   //height: 80rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background-color: $color-grey-light-1;
+  // background-color: $color-grey-light-1;
+  background-image: linear-gradient(to bottom right, rgba($color-white, .6), rgba($color-white, .6)),
+                    url('/images/intro.JPG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   &-text {
-    text-align: center;
+    float: left;
+    text-align: left;
     font-size: $fontSize-2;
     @include respond(phone) {
-      font-size: $fontSize-2_5;
+      font-size: $fontSize-3;
       padding: 15rem 2rem 0 2rem;
     }
     @include respond(big-desktop) {
       font-size: $fontSize-3;
     }
     padding: 15rem 1rem 0 1rem;
-    max-width: 100rem;
+    margin-left: 3rem;
+    max-width: 30rem;
+    @include respond(phone) {
+      max-width: 40rem;
+    }
+    @include respond(tab-port) {
+      max-width: 60rem;
+      margin-left: 8rem;
+    }
   }
 
   &-button {
     //padding-bottom: 5rem;
+    margin-left: 4rem;
     margin-bottom: 15rem;
+    @include respond(tab-port) {
+      margin-left: 9rem;
+    }
   }
 
   &--animated {

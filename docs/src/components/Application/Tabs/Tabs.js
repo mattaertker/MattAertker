@@ -59,19 +59,24 @@ export default class Tabs extends Component {
                 <Container className="Tabs">
                     <TabsOption toggle={this.togglePersonal}
                         id="Personal"
+                        hRef="#TabContent__Personal"
                         header="Personal" state={this.state.isPersonal} />
                     <TabsOption toggle={this.toggleNatours}
                         id="Natours"
+                        hRef="#TabContent__Natours"
                         header="Natours" state={this.state.isNatours}/>
                     <TabsOption toggle={this.toggleMedicare}
                         id="MedicareReimbursements"
+                        hRef="#TabContent__Medicare"
                         header="Medicare Reimbursements"
                         paddingLeft="4rem" state={this.state.isMedicare}/>
                     <TabsOption toggle={this.toggleHotel}
                         id="Hotel"
+                        hRef="#TabContent__Hotel"
                         header="Hotel" state={this.state.isHotel}/>
                     <TabsOption toggle={this.toggleBugZoo}
                         id="CsuBugZoo"
+                        hRef="#TabContent__BugZoo"
                         header="CSU bug zoo volunteers"
                         paddingLeft="5rem" state={this.state.isBugZoo}/>
                 </Container>
@@ -191,7 +196,6 @@ export default class Tabs extends Component {
     // }
 
     togglePersonal() {
-        console.log("going to pers: " + this.state.isPersonal);
         this.setState({
             isPersonal: true,
             isNatours: false,
@@ -204,7 +208,6 @@ export default class Tabs extends Component {
     }
 
     toggleNatours() {
-        console.log("going to nat: " + this.state.isNatours);
         this.setState({
             isPersonal: false,
             isNatours: true,
@@ -217,7 +220,6 @@ export default class Tabs extends Component {
     }
 
     toggleHotel() {
-        console.log("going to hotel: " + this.state.isHotel);
         this.setState({
             isPersonal: false,
             isNatours: false,
@@ -230,7 +232,6 @@ export default class Tabs extends Component {
     }
 
     toggleMedicare() {
-        console.log("going to med: " + this.state.isMedicare);
         this.setState({
             isPersonal: false,
             isNatours: false,
@@ -242,7 +243,6 @@ export default class Tabs extends Component {
         });
     }
     toggleBugZoo() {
-        console.log("going to bug: " + this.state.isBugZoo);
         this.setState({
             isPersonal: false,
             isNatours: false,
