@@ -99,7 +99,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/images/intro.JPG");
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/MattAertker/images/intro.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
