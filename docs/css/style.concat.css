@@ -313,7 +313,7 @@ a.intro-Contact-link {
 .About {
   width: 100vw; }
   .About__top {
-    background-image: linear-gradient(to bottom right, rgba(29, 17, 96, 0.6), rgba(0, 120, 140, 0.6)), url("/MattAertker/images/ariaWinnie2.jpg");
+    background-image: linear-gradient(to bottom right, rgba(29, 17, 96, 0.6), rgba(0, 120, 140, 0.6)), url("https://mattaertker.github.io/MattAertker/images/ariaWinnie2.jpg");
     height: 100vh;
     background-position: center;
     background-size: cover;
