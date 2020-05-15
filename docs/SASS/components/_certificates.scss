@@ -8,7 +8,7 @@ $accent-color: #355cc9;
 }
 
 .card {
-    height: 33rem;
+    height: 40rem;
     @include respond(phone) {
         height: 40rem;
     }
@@ -126,8 +126,11 @@ $accent-color: #355cc9;
 			background-color: #ccc;
 		}
 		span {
-			font-size: 2em;
-			font-weight: 700;
+			font-size: 2rem;
+			@include respond(iconFix) {
+				font-size: 2em;
+			}
+			font-weight: 900;
 		}
 		i {
 			&:before {
@@ -155,7 +158,7 @@ $accent-color: #355cc9;
 		grid-column: 1/-1;
 		font-size: 0.86em;
 		border-radius: 5px;
-		font-weight: 600;
+		// font-weight: 600;
 		line-height: 1.4em;
 		overflow: auto;
 		color: $accent-color;
@@ -174,7 +177,10 @@ $accent-color: #355cc9;
 	.cert-name {
 		grid-column: 1/3;
 		justify-self: left;
-    color: $accent-color;
+		color: $accent-color;
+		@include respond(iconFix) {
+			font-size: 2rem;
+		}
 	}
 
 	.button {
