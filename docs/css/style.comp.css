@@ -370,7 +370,11 @@ a.intro-Contact-link {
         flex-direction: column; } }
     .About__certificates-line {
       width: 80%;
+      margin-left: 10%;
       border-bottom: 5px solid black; }
+      @media only screen and (min-width: 37.5em) {
+        .About__certificates-line {
+          margin-left: 0; } }
   .About__mid-border {
     width: 80%;
     margin-left: 10%;
@@ -763,15 +767,12 @@ a.intro-Contact-link {
   font-size: 1.6rem; }
 
 .card {
-  height: 33rem;
+  height: 40rem;
   width: 100vw;
   max-width: 580px;
   max-height: 55rem;
   margin: 1em;
   perspective: 1500px; }
-  @media only screen and (min-width: 37.5em) {
-    .card {
-      height: 40rem; } }
   .card .content {
     position: relative;
     width: 100%;
@@ -859,8 +860,11 @@ a.intro-Contact-link {
       width: 1px;
       background-color: #ccc; }
     .back .info span {
-      font-size: 2em;
+      font-size: 2rem;
       font-weight: 700; }
+      @media only screen and (min-width: 29.38em) {
+        .back .info span {
+          font-size: 2em; } }
     .back .info i {
       font-size: 1.2em; }
       .back .info i:before {
@@ -893,8 +897,10 @@ a.intro-Contact-link {
     font-size: 0.86em; }
   .back .cert-name {
     grid-column: 1/3;
-    justify-self: left;
     color: #355cc9; }
+    @media only screen and (min-width: 37.5em) {
+      .back .cert-name {
+        justify-self: left; } }
   .back .button {
     display: flex;
     justify-content: center;
