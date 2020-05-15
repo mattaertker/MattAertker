@@ -10,7 +10,7 @@ export default class BottomTech extends Component {
         return (
             <Container className="col-1-of-5">
                 <Container className={"topTech-icon topTech-icon-" + this.props.id} id={this.props.id}
-                    style={{backgroundImage: "url(https://mattaertker.github.io/MattAertker/images/" + this.props.id +".jpg)", 
+                    style={{backgroundImage: "url(./images/" + this.props.id +".jpg)", 
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat'}} >

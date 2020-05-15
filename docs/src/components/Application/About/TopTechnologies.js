@@ -1,7 +1,6 @@
 import React, { Component, Image } from 'react';
 import { Container } from 'reactstrap';
 import HeaderSecondary from '../Components/HeaderSecondary';
-import Icon from './Icon';
 
 export default class TopTech extends Component {
     constructor(props) {
@@ -15,7 +14,7 @@ export default class TopTech extends Component {
     render() {
         return (
             <Container className="topTech">
-                <HeaderSecondary headerSecondary="Top Technologies" />
+                <HeaderSecondary headerSecondary="Top Technologies"/>
                 {/* <Container className="topTech-icons"> */}
                 {this.decideFlex()}
                 {/* </Container> */}
@@ -28,17 +27,17 @@ export default class TopTech extends Component {
             return (
                 <Container>
                     <Container className="row row-topTech">
-                        <Icon id="html" />
-                        <Icon id="css" />
-                        <Icon id="scss" />
-                        <Icon id="react" />
-                        <Icon id="javascript" />
+                        {this.renderIcon("html")}
+                        {this.renderIcon("css")}
+                        {this.renderIcon("scss")}
+                        {this.renderIcon("react")}
+                        {this.renderIcon("javascript")}
                     </Container>
                     <Container className="row row-topTech">
-                        <Icon id="jQuery" />
-                        <Icon id="nodejs" />
-                        <Icon id="bootstrap" />
-                        <Icon id="angular" />
+                        {this.renderIcon("jQuery")}
+                        {this.renderIcon("nodejs")}
+                        {this.renderIcon("bootstrap")}
+                        {this.renderIcon("angular")}
                     </Container>
                 </Container>
             );
@@ -47,19 +46,19 @@ export default class TopTech extends Component {
             return (
                 <Container>
                     <Container className="row row-topTech">
-                        <Icon id="html" />
-                        <Icon id="css" />
-                        <Icon id="scss" />
+                        {this.renderIcon("html")}
+                        {this.renderIcon("css")}
+                        {this.renderIcon("scss")}
                     </Container>
                     <Container className="row row-topTech">
-                        <Icon id="jQuery" />
-                        <Icon id="nodejs" />
-                        <Icon id="react" />
+                        {this.renderIcon("jQuery")}
+                        {this.renderIcon("nodejs")}
+                        {this.renderIcon("react")}
                     </Container>
                     <Container className="row row-topTech">
-                        <Icon id="javascript" />
-                        <Icon id="bootstrap" />
-                        <Icon id="angular" />
+                        {this.renderIcon("javascript")}
+                        {this.renderIcon("bootstrap")}
+                        {this.renderIcon("angular")}
                     </Container>
                 </Container>
             );
@@ -67,16 +66,35 @@ export default class TopTech extends Component {
         return (
             <Container>
                 <Container className="row row-topTech">
-                    <Icon id="html" />
-                    <Icon id="css" />
-                    <Icon id="scss" />
-                    <Icon id="jQuery" />
-                    <Icon id="nodejs" />
-                    <Icon id="react" />
-                    <Icon id="javascript" />
-                    <Icon id="bootstrap" />
-                    <Icon id="angular" />
+                    {this.renderIcon("html")}
+                    {this.renderIcon("css")}
+                    {this.renderIcon("scss")}
+                    {this.renderIcon("jQuery")}
+                    {this.renderIcon("nodejs")}
+                    {this.renderIcon("react")}
+                    {this.renderIcon("javascript")}
+                    {this.renderIcon("bootstrap")}
+                    {this.renderIcon("angular")}
                 </Container>
+            </Container>
+        );
+    }
+
+    renderIcon(id) {
+        return (
+            <Container className={"col-1-of-5 col-1-of-5-" + id}>
+                <Container className={"topTech-icon topTech-icon-" + id} id={id}
+                    style={{backgroundImage: "url(./images/" + id +".jpg)", 
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat'}} >
+                    {/* <img src={"./images/" +id +".jpg"}
+                            onLoad={this._onLoad}/> */}
+
+                    
+                </Container>
+                {/* {!this.state.loaded &&
+                        <div>Did Not Load Yet</div>} */}
             </Container>
         );
     }
