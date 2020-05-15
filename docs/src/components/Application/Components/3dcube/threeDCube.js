@@ -1,11 +1,5 @@
 import React,{Component} from 'react'
 import {Container} from 'reactstrap';
-import one from './1.jpg';
-import two from './2.jpg';
-import three from './3.jpg';
-import four from './4.jpg';
-import five from './5.jpg';
-import six from './6.jpg';
 import fallOne from './fall1.jpg';
 import fallTwo from './fall2.jpg';
 import fallThree from './fall3.jpg';
@@ -31,29 +25,10 @@ export default class ThreeDCube extends Component {
 
     }
     render() {
-        // from least to greatest important images
-       //1. // 3
-       //2. // 2
-       //3. // 4
-       //4. // 1
-       //5. // 6
-       //6. // 5
         return (
             <div>
                 {this.getCubeSeason()}
             </div>
-            // <Container>
-            //         <div className="wrap">
-            //             <div className={"cube"}>
-            //                 <img src={one} alt="img one"/>
-            //                 <img src={two} alt="img two"/>
-            //                 <img src={three} alt="img three"/>
-            //                 <img src={four} alt="img four"/>
-            //                 <img src={five} alt="img five"/>
-            //                 <img src={six} alt="img six"/>
-            //             </div>
-            //         </div>
-            // </Container>
         );
     }
 

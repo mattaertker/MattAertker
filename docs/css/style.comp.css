@@ -99,7 +99,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/MattAertker/images/intro.JPG");
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://mattaertker.github.io/MattAertker/images/intro.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -313,7 +313,7 @@ a.intro-Contact-link {
 .About {
   width: 100vw; }
   .About__top {
-    background-image: linear-gradient(to bottom right, rgba(29, 17, 96, 0.6), rgba(0, 120, 140, 0.6)), url("https://mattaertker.github.io/MattAertker/images/ariaWinnie2.jpg");
+    background-image: linear-gradient(to bottom right, rgba(29, 17, 96, 0.6), rgba(0, 120, 140, 0.6)), url("https://mattaertker.github.io/MattAertker/images/userAbout.jpg");
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -370,7 +370,11 @@ a.intro-Contact-link {
         flex-direction: column; } }
     .About__certificates-line {
       width: 80%;
+      margin-left: 10%;
       border-bottom: 5px solid black; }
+      @media only screen and (min-width: 37.5em) {
+        .About__certificates-line {
+          margin-left: 0; } }
   .About__mid-border {
     width: 80%;
     margin-left: 10%;
@@ -884,7 +888,7 @@ a.intro-Contact-link {
     line-height: 1.4em;
     overflow: auto;
     color: #355cc9;
-    padding-right: 10px; }
+    padding-right: 1.8rem; }
   .back .location,
   .back .price {
     font-weight: 600;
@@ -1027,7 +1031,8 @@ a.intro-Contact-link {
     margin-top: 5rem; }
   .row-topTech {
     margin-bottom: 5rem;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     @media only screen and (min-width: 37.5em) {
       .row-topTech {
         flex-direction: row;
