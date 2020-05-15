@@ -36,15 +36,15 @@ export default class Certificates extends Component {
                         </div>
                         <div className="back">
                             <div className="inner">
-                                <div className="info" style={{}}>
-                                    <span style={{}}>{this.props.completionDate}</span>
+                                <div className="info" style={{ marginRight: '2rem', fontSize: "2rem" }}>
+                                    <span style={{ fontSize: "2.3rem" }}>{this.props.completionDate}</span>
                                     <div className="icon">
                                         <i className="fa fa-check"></i>
                                         <span >Date of</span>
                                         <span >Completion</span>
                                     </div>
                                 </div>
-                                <div className="info" style={{ }}>
+                                <div className="info" style={{ fontSize: "2rem" }}>
                                     <span>{this.props.time}</span>
                                     <div className="icon">
                                         <i className="fa fa-clock-o"></i>
