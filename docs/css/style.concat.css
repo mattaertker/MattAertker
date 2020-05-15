@@ -767,7 +767,7 @@ a.intro-Contact-link {
   font-size: 1.6rem; }
 
 .card {
-  height: 40rem;
+  height: 33rem;
   width: 100vw;
   max-width: 580px;
   max-height: 55rem;
@@ -863,11 +863,8 @@ a.intro-Contact-link {
       width: 1px;
       background-color: #ccc; }
     .back .info span {
-      font-size: 2rem;
-      font-weight: 900; }
-      @media only screen and (min-width: 29.38em) {
-        .back .info span {
-          font-size: 2em; } }
+      font-size: 2em;
+      font-weight: 700; }
     .back .info i {
       font-size: 1.2em; }
       .back .info i:before {
@@ -887,6 +884,7 @@ a.intro-Contact-link {
     grid-column: 1/-1;
     font-size: 0.86em;
     border-radius: 5px;
+    font-weight: 600;
     line-height: 1.4em;
     overflow: auto;
     color: #355cc9;
@@ -901,9 +899,6 @@ a.intro-Contact-link {
     grid-column: 1/3;
     justify-self: left;
     color: #355cc9; }
-    @media only screen and (min-width: 29.38em) {
-      .back .cert-name {
-        font-size: 2rem; } }
   .back .button {
     display: flex;
     justify-content: center;
