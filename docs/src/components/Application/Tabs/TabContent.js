@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import Challenge from './challenge.jpg';
 import Goal from './goal.jpg';
-import Natours from './Natours.jpg';
 
 export default class Tabs extends Component {
     constructor(props) {

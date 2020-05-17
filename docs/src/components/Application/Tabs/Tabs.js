@@ -1,23 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import TabContent from './TabContent';
-import Natours from './Natours.jpg';
-import Medicare from './G5_mac.jpg';
-import BugZoo from './CSU_volunteers.jpg';
-import Hotel from './Hotel.jpg';
-import MattA from './MattAertker.jpg';
-import MattAIphone from './persIphone.jpg';
-import MattAIpad from './MattAIpad.jpg';
-import NatIphone from './natIphone.jpg';
 import TabsOption from './TabsOption';
-import NatIpad from './NatIpad.jpg';
-import bugZooIphone from './images/bugZoo-iphone.jpg';
-import bugZooIpad from './images/bugZoo-ipad.jpg';
-import G5Ipad from './images/G5-ipad.jpg';
-import MedicareIphone from './images/MedicareIphone.jpg';
-import HotelIphone from './images/trillo-iphone.jpg';
-import HotelIpad from './images/trillo-ipad.jpg';
-
 
 
 //TODO: take the multiple toggle functions and make them just accept a variable then have a switch statement and toggle accordingly
@@ -64,21 +48,21 @@ export default class Tabs extends Component {
                     <TabsOption toggle={this.toggleNatours}
                         id="Natours"
                         hRef="#TabContent__Natours"
-                        header="Natours" state={this.state.isNatours}/>
+                        header="Natours" state={this.state.isNatours} />
                     <TabsOption toggle={this.toggleMedicare}
                         id="MedicareReimbursements"
                         hRef="#TabContent__Medicare"
                         header="Medicare Reimbursements"
-                        paddingLeft="4rem" state={this.state.isMedicare}/>
+                        paddingLeft="4rem" state={this.state.isMedicare} />
                     <TabsOption toggle={this.toggleHotel}
                         id="Hotel"
                         hRef="#TabContent__Hotel"
-                        header="Hotel" state={this.state.isHotel}/>
+                        header="Hotel" state={this.state.isHotel} />
                     <TabsOption toggle={this.toggleBugZoo}
                         id="CsuBugZoo"
                         hRef="#TabContent__BugZoo"
                         header="CSU bug zoo volunteers"
-                        paddingLeft="5rem" state={this.state.isBugZoo}/>
+                        paddingLeft="5rem" state={this.state.isBugZoo} />
                 </Container>
             </div>
 
@@ -88,8 +72,21 @@ export default class Tabs extends Component {
     }
 
     renderTabs() {
-        // if (!this.state.userClick)
-        //     this.displayDiv();
+        let Natours =  'https://mattaertker.github.io/MattAertker/images/Natours-7f7a7772.jpg';
+        let Medicare =  'https://mattaertker.github.io/MattAertker/images/G5_mac-82b150fa.jpg';
+        let BugZoo =  'https://mattaertker.github.io/MattAertker/images/CSU_volunteers-5829285e.jpg';
+        let Hotel =  'https://mattaertker.github.io/MattAertker/images/Hotel-19c44cdf.jpg';
+        let MattA =  'https://mattaertker.github.io/MattAertker/images/MattAertker-f361e9d3.jpg';
+        let MattAIphone =  'https://mattaertker.github.io/MattAertker/images/persIphone-209a717b.jpg';
+        let MattAIpad =  'https://mattaertker.github.io/MattAertker/images/MattAIpad-16771da4.jpg';
+        let NatIphone =  'https://mattaertker.github.io/MattAertker/images/natIphone-7415c3b8.jpg';
+        let NatIpad =  'https://mattaertker.github.io/MattAertker/images/NatIpad-703ae5fb.jpg';
+        let bugZooIphone =  'https://mattaertker.github.io/MattAertker/images/bugZoo-iphone-a645d5e6.jpg';
+        let bugZooIpad =  'https://mattaertker.github.io/MattAertker/images/bugZoo-ipad-933c25a8.jpg';
+        let G5Ipad =  'https://mattaertker.github.io/MattAertker/images/G5-ipad-f4f28d71.jpg';
+        let MedicareIphone =  'https://mattaertker.github.io/MattAertker/images/MedicareIphone-119cd214.jpg';
+        let HotelIphone =  'https://mattaertker.github.io/MattAertker/images/trillo-iphone-aa75860e.jpg';
+        let HotelIpad =  'https://mattaertker.github.io/MattAertker/images/trillo-ipad-5047aec1.jpg';
 
         if (this.state.isPersonal) {
             return (
@@ -109,19 +106,19 @@ export default class Tabs extends Component {
         if (this.state.isNatours) {
             return (
                 <div>
-                <TabContent header="Natours"
-                    macImage={Natours}
-                    iphoneImage={NatIphone}
-                    ipadImage={NatIpad}
-                    nat={true}
-                    id="TabContent__Natours"
-                    goal={"This project began during the Summer of 2019 in order to develop a solid foundation of Advanced CSS in order to expand into more complex languages such as SCSS. This foundation in Advanced CSS also helped as I went about designing my own website."}
-                    introText={"The biggest challenge with this project was learning how to calculate em and rem (website width/height measurement units), along with many other intricate details and design tips for future projects."}
-                    techUsed={"The technologies used for this project were HTML 5 and CSS."}
-                    visit={"https://mattaertker.github.io/Natours/"}
-                    github={"https://github.com/mattaertker/Natours"} />
+                    <TabContent header="Natours"
+                        macImage={Natours}
+                        iphoneImage={NatIphone}
+                        ipadImage={NatIpad}
+                        nat={true}
+                        id="TabContent__Natours"
+                        goal={"This project began during the Summer of 2019 in order to develop a solid foundation of Advanced CSS in order to expand into more complex languages such as SCSS. This foundation in Advanced CSS also helped as I went about designing my own website."}
+                        introText={"The biggest challenge with this project was learning how to calculate em and rem (website width/height measurement units), along with many other intricate details and design tips for future projects."}
+                        techUsed={"The technologies used for this project were HTML 5 and CSS."}
+                        visit={"https://mattaertker.github.io/Natours/"}
+                        github={"https://github.com/mattaertker/Natours"} />
                     {/* {this.animatePage("TabContent__Natours")} */}
-                    </div>
+                </div>
 
             )
         }
@@ -143,36 +140,36 @@ export default class Tabs extends Component {
         if (this.state.isMedicare) {
             return (
                 <div>
-                <TabContent header="Medicare Reimbursements"
-                    macImage={Medicare}
-                    iphoneImage={MedicareIphone}
-                    ipadImage={G5Ipad}
-                    med={true}
-                    id="TabContent__Medicare"
-                    goal={"This project was completed with 3 other group members in Spring of 2019 and was one of the first big website development projects I've done. The goal of this website was to efficiently perform the calculations for 5000 different hospitals' Medicare Reimbursements."}
-                    introText={"The challenges faced for this project were laerning how to connect a database to our project, manipulate images to look good on most devices, and perform some of the algorithms for the calculationss of the reimbursement."}
-                    techUsed={"The technologies used for this project were HTML 5, Fuel MVC, Javascript, jQuery, and CSS."}
-                    visit={"https://www.cs.colostate.edu/~maertker/ct310/m4/index/project"} />
+                    <TabContent header="Medicare Reimbursements"
+                        macImage={Medicare}
+                        iphoneImage={MedicareIphone}
+                        ipadImage={G5Ipad}
+                        med={true}
+                        id="TabContent__Medicare"
+                        goal={"This project was completed with 3 other group members in Spring of 2019 and was one of the first big website development projects I've done. The goal of this website was to efficiently perform the calculations for 5000 different hospitals' Medicare Reimbursements."}
+                        introText={"The challenges faced for this project were laerning how to connect a database to our project, manipulate images to look good on most devices, and perform some of the algorithms for the calculationss of the reimbursement."}
+                        techUsed={"The technologies used for this project were HTML 5, Fuel MVC, Javascript, jQuery, and CSS."}
+                        visit={"https://www.cs.colostate.edu/~maertker/ct310/m4/index/project"} />
                     {/* {this.animatePage("TabContent__Medicare")} */}
-                    </div>
+                </div>
             )
         }
         if (this.state.isBugZoo) {
             return (
                 <div>
-                <TabContent header="CSU Bug Zoo"
-                    macImage={BugZoo}
-                    iphoneImage={bugZooIphone}
-                    ipadImage={bugZooIpad}
-                    bug={true}
-                    id="TabContent__BugZoo"
-                    goal={"Although currently in progress, this website will hopefully be used by the CSU Bug Zoo volunteers as a guide to effectively care for the various species of bugs at the Zoo."}
-                    introText={"The main challenges I am currently encountering are getting the accommodations for all disabilities within this website to work so it can be used by volunteers for the CSU bug zoo."}
-                    techUsed={"The technologies being used for this project are HTML 5 and SCSS."}
-                    visit={"https://mattaertker.github.io/BugZooVolunteers/"}
-                    github={"https://github.com/mattaertker/BugZooVolunteers"} />
+                    <TabContent header="CSU Bug Zoo"
+                        macImage={BugZoo}
+                        iphoneImage={bugZooIphone}
+                        ipadImage={bugZooIpad}
+                        bug={true}
+                        id="TabContent__BugZoo"
+                        goal={"Although currently in progress, this website will hopefully be used by the CSU Bug Zoo volunteers as a guide to effectively care for the various species of bugs at the Zoo."}
+                        introText={"The main challenges I am currently encountering are getting the accommodations for all disabilities within this website to work so it can be used by volunteers for the CSU bug zoo."}
+                        techUsed={"The technologies being used for this project are HTML 5 and SCSS."}
+                        visit={"https://mattaertker.github.io/BugZooVolunteers/"}
+                        github={"https://github.com/mattaertker/BugZooVolunteers"} />
                     {/* {this.animatePage("TabContent__BugZoo")} */}
-                    </div>
+                </div>
             )
         }
         document.getElementsByClassName("TabContent").style.opacity = 1;
@@ -253,7 +250,7 @@ export default class Tabs extends Component {
             // isFlightTrip: false
         });
     }
-    displayDiv() { 
+    displayDiv() {
         if (this.state.isPersonal) {
             setTimeout(() => {
                 if (!this.state.userClick) {
@@ -274,7 +271,7 @@ export default class Tabs extends Component {
                 }
             }, 5000);
         }
-    } 
+    }
 
     rotateToMedicare() {
         if (this.state.isNatours) {
